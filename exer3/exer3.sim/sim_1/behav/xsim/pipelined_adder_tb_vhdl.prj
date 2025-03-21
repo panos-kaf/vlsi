@@ -1,9 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../exer3.srcs/sources_1/new/dff.vhd" \
-"../../../../exer3.srcs/sources_1/new/fulladder.vhd" \
-"../../../../exer3.srcs/sources_1/new/pipelined_adder.vhd" \
-"../../../../exer3.srcs/sim_1/new/pipelined_adder_tb.vhd" \
-
-# Do not sort compile order
-nosort
