@@ -28,6 +28,13 @@ component shift_register is
         );
 end component; 
 
+component dff is
+    port(
+        Q : out std_logic;
+        D, CLK, RST: in std_logic
+        );
+end component;
+
 type four_by_four_matrix is array(3 downto 0) of std_logic_vector(3 downto 0);
 type three_by_three_matrix is array(2 downto 0) of std_logic_vector(2 downto 0);
 
@@ -35,6 +42,7 @@ signal a_internal, b_internal, c_internal: four_by_four_matrix := (others => (ot
 signal s_internal: three_by_three_matrix := (others => (others => '0'));
 signal a_delayed, b_delayed: std_logic_vector (2 downto 0) := "000";
 signal p_delayed: std_logic_vector (5 downto 0) := (others => '0');
+signal c_delayed: std_logic_vector (2 downto 0) := (others => '0');
 
 begin
 
@@ -52,6 +60,25 @@ delay_p2: shift_register generic map(X => 5) port map(CLK=>CLK, RST => RST,D => 
 delay_p3: shift_register generic map(X => 3) port map(CLK=>CLK, RST => RST,D => p_delayed(3), Q => Product(3));
 delay_p4: shift_register generic map(X => 2) port map(CLK=>CLK, RST => RST,D => p_delayed(4), Q => Product(4));
 delay_p5: shift_register generic map(X => 1) port map(CLK=>CLK, RST => RST,D => p_delayed(5), Q => Product(5));
+
+dffC1: dff port map(
+                    Q => c_internal(0)(3),
+                    D => c_delayed(0),
+                    CLK => CLK,
+                    RST => RST
+                    );
+dffC2: dff port map(
+                    Q => c_internal(1)(3),
+                    D => c_delayed(1),
+                    CLK => CLK,
+                    RST => RST
+                    );                    
+dffC3: dff port map(
+                    Q => c_internal(2)(3),
+                    D => c_delayed(2),
+                    CLK => CLK,
+                    RST => RST
+                    );
 
 
 pb11: processing_block port map(
@@ -149,7 +176,7 @@ pb24: processing_block port map(
                                a_in => a_internal(3)(0),
                                b_in => b_internal(1)(2),
                                c_in => c_internal(1)(2),
-                               s_in => c_internal(0)(3),
+                               s_in => c_delayed(0),
                                clk => CLK,
                                RST => RST,
                                a_out => a_internal(3)(1),
@@ -201,7 +228,7 @@ pb34: processing_block port map(
                                a_in => a_internal(3)(1),
                                b_in => b_internal(2)(2),
                                c_in => c_internal(2)(2),
-                               s_in => c_internal(1)(3),
+                               s_in => c_delayed(1),
                                clk => CLK,
                                RST => RST,
                                a_out => a_internal(3)(2),
@@ -253,7 +280,7 @@ pb44: processing_block port map(
                                a_in => a_internal(3)(2),
                                b_in => b_internal(3)(2),
                                c_in => c_internal(3)(2),
-                               s_in => c_internal(2)(3),
+                               s_in => c_delayed(2),
                                clk => CLK,
                                RST => RST,
                                a_out => a_internal(3)(3),
