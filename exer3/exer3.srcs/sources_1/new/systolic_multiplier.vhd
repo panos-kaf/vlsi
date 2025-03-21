@@ -62,20 +62,20 @@ delay_p4: shift_register generic map(X => 2) port map(CLK=>CLK, RST => RST,D => 
 delay_p5: shift_register generic map(X => 1) port map(CLK=>CLK, RST => RST,D => p_delayed(5), Q => Product(5));
 
 dffC1: dff port map(
-                    Q => c_internal(0)(3),
-                    D => c_delayed(0),
+                    D => c_internal(0)(3),
+                    Q => c_delayed(0),
                     CLK => CLK,
                     RST => RST
                     );
 dffC2: dff port map(
-                    Q => c_internal(1)(3),
-                    D => c_delayed(1),
+                    D => c_internal(1)(3),
+                    Q => c_delayed(1),
                     CLK => CLK,
                     RST => RST
                     );                    
 dffC3: dff port map(
-                    Q => c_internal(2)(3),
-                    D => c_delayed(2),
+                    D => c_internal(2)(3),
+                    Q => c_delayed(2),
                     CLK => CLK,
                     RST => RST
                     );
