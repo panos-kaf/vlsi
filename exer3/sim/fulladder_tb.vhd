@@ -9,16 +9,16 @@ architecture tb of fulladder_tb is
 
     component fulladder
         port(
-            A, B, C_IN, CLK: in std_logic;
+            A, B, C_IN, CLK, RST: in std_logic;
             S, C_OUT: out std_logic
         );
     end component;
     
-    signal A, B, C_IN, C_OUT, S, CLK: std_logic;
+    signal A, B, C_IN, CLK, RST, S, C_OUT: std_logic;
     
     begin    
         
-        DUT: fulladder port map(A, B, C_IN, CLK, S, C_OUT);
+        DUT: fulladder port map(A, B, C_IN, CLK, RST, S, C_OUT);
         
         CLK_GEN: process
         begin
@@ -30,6 +30,10 @@ architecture tb of fulladder_tb is
         
         STIMULUS: process 
         begin
+            
+            RST <= '1';
+            wait for 20 ns;
+            RST <= '0';
             
             for i in 0 to 7 loop
                 A <= std_logic(to_unsigned((i / 4) mod 2, 1)(0));

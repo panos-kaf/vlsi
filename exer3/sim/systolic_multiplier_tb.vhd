@@ -10,18 +10,18 @@ architecture testbench of systolic_multiplier_tb is
 component systolic_multiplier is
     port(
         A,B: in std_logic_vector (3 downto 0);
-        CLK: in std_logic;
+        CLK, RST: in std_logic;
         Product: out std_logic_vector (7 downto 0)
         );
 end component;
 
 signal A,B: std_logic_vector (3 downto 0);
-signal CLK: std_logic;
+signal CLK, RST: std_logic;
 signal Product: std_logic_vector (7 downto 0);
 
 begin
 
-DUT: systolic_multiplier port map(A,B,CLK,Product);
+DUT: systolic_multiplier port map(A,B,CLK,RST,Product);
 
 GEN_CLK: process
     begin
@@ -33,7 +33,18 @@ GEN_CLK: process
 
 STIMULUS: process
 begin
+    RST <= '1';
+    wait for 20 ns;
+    RST <= '0';
     
+        
+    --A <= "0010";
+    --B <= "0011";
+    --wait for 20 ns;
+    
+    --A <= "1010";
+    --B <= "0100";
+    --wait for 20 ns;
     for i in 0 to 15 loop
         for j in 0 to 15 loop
             A <= std_logic_vector(to_unsigned(i, 4));
@@ -41,6 +52,9 @@ begin
             wait for 20 ns;
         end loop;
     end loop;
+    
+    wait;
+    
 end process;
              
 end testbench;
