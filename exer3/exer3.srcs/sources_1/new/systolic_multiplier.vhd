@@ -20,7 +20,7 @@ end component;
 
 component shift_register is
     generic(
-        X : integer := 5
+        X : integer := 1
             );
     port(
         Q : out std_logic;

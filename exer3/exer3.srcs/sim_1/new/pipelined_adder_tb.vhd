@@ -11,20 +11,20 @@ architecture testbench of pipelined_adder_tb is
     component pipelined_adder is
         port(
             A,B: in std_logic_vector (3 downto 0);
-            C_IN, CLK: in std_logic;
+            C_IN, CLK, RST: in std_logic;
             S: out std_logic_vector (3 downto 0);
             C_OUT: out std_logic
             );   
      end component;  
      
      signal A,B: std_logic_vector (3 downto 0) := "0000";    
-     signal C_IN, CLK: std_logic;
+     signal C_IN, CLK, RST: std_logic;
      signal S: std_logic_vector (3 downto 0);
      signal C_OUT: std_logic; 
     
 begin
     
-    DUT: pipelined_adder port map(A,B,C_IN,CLK,S,C_OUT);
+    DUT: pipelined_adder port map(A,B,C_IN,CLK,RST,S,C_OUT);
 
     GEN_CLK: process
     begin
@@ -36,6 +36,10 @@ begin
 
     STIMULUS: process
     begin
+    
+    RST <= '1';
+    wait for 20 ns;
+    RST <= '0';     
            
     for i in 0 to 1 loop
         for j in 0 to 15 loop

@@ -1,7 +1,4 @@
-Running: xsim.dir/pipelined_adder_tb_behav/xsimk -simmode gui -wdb pipelined_adder_tb_behav.wdb -simrunnum 0 -socket 53259
+Running: xsim.dir/pipelined_adder_tb_behav/xsimk -simmode gui -wdb pipelined_adder_tb_behav.wdb -simrunnum 0 -socket 38067
 Design successfully loaded
-Design Loading Memory Usage: 362160 KB (Peak: 362160 KB)
-Design Loading CPU Usage: 70 ms
-Simulation completed
-Simulation Memory Usage: 448300 KB (Peak: 501572 KB)
-Simulation CPU Usage: 100 ms
+Design Loading Memory Usage: 362164 KB (Peak: 362164 KB)
+Design Loading CPU Usage: 50 ms
