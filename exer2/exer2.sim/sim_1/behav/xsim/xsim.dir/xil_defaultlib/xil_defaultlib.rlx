@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/user/vlsi/exer2/exer2.srcs/sim_1/new/bcd_adder_tb.vhd,1741715419,vhdl,,,,bcd_adder_tb,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sim_1/new/fulladder_tb.vhd,1741712129,vhdl,,,,fulladder_tb,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sim_1/new/halfadder_tb.vhd,1741710353,vhdl,,,,halfadder_tb,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sim_1/new/parallel_adder_tb.vhd,1741713646,vhdl,,,,parallel_adder_tb,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sim_1/new/parallel_bcd_adder_tb.vhd,1741768356,vhdl,,,,parallel_bcd_adder_tb,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sources_1/new/4bit_parallel_adder.vhd,1741714610,vhdl,,,,parallel_adder,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sources_1/new/bcd_adder.vhd,1741727050,vhdl,,,,bcd_adder,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sources_1/new/bcd_parallel.vhd,1741719153,vhdl,,,,bcd_parallel,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sources_1/new/fulladder.vhd,1741714518,vhdl,,,,full_adder,,,,,,,,
+/home/user/vlsi/exer2/exer2.srcs/sources_1/new/halfadder.vhd,1741714622,vhdl,,,,half_adder,,,,,,,,
