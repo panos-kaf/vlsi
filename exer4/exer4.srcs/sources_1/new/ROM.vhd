@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 
 entity ROM is
 	 generic (
-		coeff_width : integer :=8  				--- width of coefficients (bits)
+		coeff_width : integer := 8  				--- width of coefficients (bits)
 	 );
     Port ( clk : in  STD_LOGIC;
 		   en : in  STD_LOGIC;				--- operation enable

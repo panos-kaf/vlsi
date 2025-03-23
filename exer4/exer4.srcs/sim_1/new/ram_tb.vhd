@@ -83,5 +83,18 @@ begin
     
     di <= "00001001";
     wait for 20 ns;
+    
+    we <= '0';
+    
+    addr <= "010";
+    wait for 20ns;
+    
+    addr <= "101";
+    wait for 20 ns;
+    
+    addr <= "001";
+    wait for 20 ns;
+    
+    wait;
 end process;
 end testbench;

@@ -12,18 +12,27 @@ component FIR is
          clk, rst, valid_in: in std_logic;
          x: in std_logic_vector (7 downto 0);
          y: inout std_logic_vector (18 downto 0);
-         valid_out: out std_logic
+         valid_out: out std_logic;
+         valid_debug: out std_logic;
+         mac_init: out std_logic;
+         r0,r1,r2,r3,r4,r5,r6,r7: out std_logic_vector (7 downto 0)
     );
 end component;
 
-signal clk, rst, valid_in: std_logic;
+signal clk: std_logic;
+signal rst: std_logic := '0';
+signal valid_in: std_logic;
 signal x: std_logic_vector (7 downto 0);
 signal y: std_logic_vector (18 downto 0);
 signal valid_out: std_logic;
+signal valid_debug: std_logic;
+signal mac_init: std_logic;
+signal r0,r1,r2,r3,r4,r5,r6,r7: std_logic_vector(7 downto 0);
+
 
 begin
 
-DUT: FIR port map(clk, rst, valid_in, x, y, valid_out);
+DUT: FIR port map(clk, rst, valid_in, x, y, valid_out, valid_debug, mac_init, r0,r1,r2,r3,r4,r5,r6,r7);
 
 GEN_CLK: process
 begin
@@ -43,14 +52,15 @@ end process;
 
 STIMULUS: process
 begin
+x <= "00000000";
 
 rst <= '1';
-wait for 20 ns;
+wait for 160 ns;
 rst <= '0';
 
 x <= "00000010";
 wait for 320 ns;
-
+wait;
 --for i in 0 to 255 loop
 --    x <= std_logic_vector(to_unsigned(i,8));
 --    end loop;
