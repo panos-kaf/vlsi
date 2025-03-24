@@ -30,6 +30,7 @@ begin
     
         if rst = '1' then
             RAM <= (others => (others => '0'));
+            do <= (others => '0');
         elsif clk'event and clk = '1' then
             if en = '1' then
                 if we = '1' then				-- write operation

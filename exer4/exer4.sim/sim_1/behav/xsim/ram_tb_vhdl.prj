@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../exer4.srcs/sources_1/new/RAM.vhd" \
-"../../../../exer4.srcs/sim_1/new/ram_tb.vhd" \
-
-# Do not sort compile order
-nosort

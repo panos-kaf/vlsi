@@ -43,7 +43,12 @@ end process;
 STIMULUS: process
 begin
     rst <= '1';
-    wait for 20 ns;
+    we <= '0';
+    en <= '1';
+    addr <= "000";
+    di <= "00000000";
+    
+    wait for 160 ns;
     rst <= '0';
     
     en <= '1';

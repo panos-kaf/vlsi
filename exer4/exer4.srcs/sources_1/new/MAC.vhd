@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity MAC is
     port(
@@ -22,7 +23,8 @@ begin
     elsif rising_edge(CLK) then
     
         if mac_init = '1' then
-            y <= (others => '0');
+            --y <= (others => '0');
+            y <= std_logic_vector(resize(unsigned(x) * unsigned(h),19));
         else 
             y <= y + x*h;
         end if;
