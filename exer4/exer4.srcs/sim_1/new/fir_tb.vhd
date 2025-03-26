@@ -15,7 +15,7 @@ component FIR is
          valid_out: out std_logic;
          valid_debug: out std_logic;
          mac_init: out std_logic;
-         --r0,r1,r2,r3,r4,r5,r6,r7: out std_logic_vector (7 downto 0);
+         --ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: out std_logic_vector (7 downto 0);
          --ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : out std_logic_vector(7 downto 0);
          address : out std_logic_vector (2 downto 0);
          x_debug, h_debug : out std_logic_vector (7 downto 0)
@@ -30,7 +30,7 @@ signal y: std_logic_vector (18 downto 0) := (others => '0');
 signal valid_out: std_logic;
 signal valid_debug: std_logic;
 signal mac_init: std_logic;
---signal r0,r1,r2,r3,r4,r5,r6,r7: std_logic_vector(7 downto 0);
+--signal ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: std_logic_vector(7 downto 0);
 --signal ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : std_logic_vector(7 downto 0);
 signal address : std_logic_vector (2 downto 0);
 signal x_debug, h_debug : std_logic_vector (7 downto 0);
@@ -40,7 +40,7 @@ begin
 
 DUT: FIR port map(clk, rst, valid_in, x, y, 
                   valid_out, valid_debug, mac_init, 
-                  --r0,r1,r2,r3,r4,r5,r6,r7, 
+                  --ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7, 
                   --ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7,
                   address, x_debug, h_debug
                   );

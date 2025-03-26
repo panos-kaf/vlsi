@@ -9,9 +9,8 @@ entity FIR is
          valid_out: out std_logic;
          valid_debug: out std_logic;
          mac_init: out std_logic;
-         --r0, r1, r2, r3, r4, r5, r6, r7: out std_logic_vector (7 downto 0);
+         --ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7: out std_logic_vector (7 downto 0);
          --ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : out std_logic_vector(7 downto 0);
-         --ram_addr, rom_addr : out std_logic_vector(2 downto 0);
          address: out std_logic_vector (2 downto 0);
          x_debug, h_debug: out std_logic_vector (7 downto 0)
     );
@@ -23,8 +22,7 @@ component CU
     port(
         CLK, RST, valid_in: in std_logic;
         mac_init, valid_to_ram, valid_out: out std_logic;
-        --rom_address, ram_address: out std_logic_vector (2 downto 0)
-        cnt : inout std_logic_vector (2 downto 0)
+        address : inout std_logic_vector (2 downto 0)
     );
 end component;
 
@@ -64,7 +62,7 @@ component ROM
 
 end component;
 
-signal addr_internal, rom_internal, ram_internal: std_logic_vector (2 downto 0);
+signal address_internal, rom_internal, ram_internal: std_logic_vector (2 downto 0);
 signal mac_init_internal: std_logic;
 signal x_internal, h_internal: std_logic_vector (7 downto 0);
 signal valid_to_ram: std_logic;
@@ -73,13 +71,9 @@ begin
 
 valid_debug <= valid_to_ram;
 mac_init <= mac_init_internal;
---rom_addr <= rom_internal;
---ram_addr <= ram_internal;
 x_debug <= x_internal;
 h_debug <= h_internal;
-
-address <= addr_internal;
-
+address <= address_internal;
 
 control_unit: CU port map(
                           CLK => CLK,
@@ -88,14 +82,13 @@ control_unit: CU port map(
                           mac_init => mac_init_internal,
                           valid_to_ram => valid_to_ram,
                           valid_out => valid_out,
-                          cnt => addr_internal
-                          --ram_address => ram_internal
+                          address => address_internal
                           );
  
 rom_unit: ROM port map(
                   clk => CLK,
                   en => '1',
-                  addr => addr_internal,
+                  addr => address_internal,
                   rom_out => h_internal
                   --ROM0 => ROM0, ROM1 => ROM1, ROM2 => ROM2, ROM3 => ROM3, ROM4 => ROM4, ROM5 => ROM5, ROM6 => ROM6, ROM7 => ROM7
                   );
@@ -105,10 +98,10 @@ ram_unit: RAM port map(
                        rst => RST,
                        we => valid_to_ram,
                        en => '1',
-                       addr => addr_internal,
+                       addr => address_internal,
                        di => x,
                        do => x_internal
-                       -- r0 => r0, r1 => r1, r2 => r2, r3 => r3, r4 => r4, r5 => r5, r6 => r6, r7 => r7                          
+                       -- ram0 => ram0, ram1 => ram1, ram2 => ram2, ram3 => ram3, ram4 => ram4, ram5 => ram5, ram6 => ram6, ram7 => ram7                          
 );
 
 mac_unit: MAC port map(

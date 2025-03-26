@@ -13,7 +13,7 @@ entity RAM is
           addr : in std_logic_vector(2 downto 0);			-- memory address
           di   : in std_logic_vector(data_width-1 downto 0);		-- input data
           do   : out std_logic_vector(data_width-1 downto 0);		-- output data
-          r0,r1,r2,r3,r4,r5,r6,r7: out std_logic_vector(data_width -1 downto 0)
+          ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: out std_logic_vector(data_width -1 downto 0)
           );
 
 end RAM;
@@ -44,14 +44,14 @@ begin
         end if;
     end process;
 
-r0 <= RAM(0);
-r1 <= RAM(1);
-r2 <= RAM(2);
-r3 <= RAM(3);
-r4 <= RAM(4);
-r5 <= RAM(5);
-r6 <= RAM(6);
-r7 <= RAM(7);
+ram0 <= RAM(0);
+ram1 <= RAM(1);
+ram2 <= RAM(2);
+ram3 <= RAM(3);
+ram4 <= RAM(4);
+ram5 <= RAM(5);
+ram6 <= RAM(6);
+ram7 <= RAM(7);
 
 end behavioral;
 

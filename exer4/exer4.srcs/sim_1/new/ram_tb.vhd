@@ -17,7 +17,7 @@ component ram is
           addr : in std_logic_vector(2 downto 0);			-- memory address
           di   : in std_logic_vector(data_width-1 downto 0);		-- input data
           do   : out std_logic_vector(data_width-1 downto 0);		-- output data
-          r0,r1,r2,r3,r4,r5,r6,r7: out std_logic_vector(data_width-1 downto 0)
+          ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: out std_logic_vector(data_width-1 downto 0)
           );
           
 end component;
@@ -25,12 +25,12 @@ end component;
 signal clk, rst, we, en: std_logic;
 signal addr: std_logic_vector (2 downto 0);
 signal di, do: std_logic_vector (7 downto 0);
-signal r0,r1,r2,r3,r4,r5,r6,r7: std_logic_vector(7 downto 0);
+signal ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: std_logic_vector(7 downto 0);
 
 
 begin
 
-DUT: ram port map(clk, rst, we, en, addr, di, do, r0, r1, r2, r3, r4, r5, r6, r7);
+DUT: ram port map(clk, rst, we, en, addr, di, do, ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7);
 
 GEN_CLK: process
 begin

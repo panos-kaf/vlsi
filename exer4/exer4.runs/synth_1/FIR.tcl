@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache /tmp/.Xil_user/Vivado-287-fa9b4c01d5ce/incrSyn
+set_param synth.incrementalSynthesisCache /tmp/.Xil_user/Vivado-287-4280b05aad46/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -106,6 +106,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/user/vlsi/exer4/exer4.srcs/utils_1/imports/synth_1/FIR.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

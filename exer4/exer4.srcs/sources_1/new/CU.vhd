@@ -6,15 +6,14 @@ entity CU is
     port(
         CLK, RST, valid_in: in std_logic;
         mac_init, valid_to_ram, valid_out: out std_logic;
-        --rom_address, ram_address: out std_logic_vector (2 downto 0)
-        cnt: inout std_logic_vector (2 downto 0)
+        address: inout std_logic_vector (2 downto 0)
     );
 end CU;
 
 architecture behavioral of CU is
 
 signal rom_internal, ram_internal: std_logic_vector (2 downto 0) := (others => '0');
-signal mac_internal, valid_out_temp1, valid_out_temp2: std_logic;
+signal mac_internal, valid_out_temp: std_logic;
 
 begin
     
@@ -25,39 +24,30 @@ begin
         
         if RST = '1' then
             mac_init <= '0';
-            cnt <= (others => '0');
-            valid_out_temp1 <= '0';
-            cnt <= "000";
-            --rom_address <= "000";
-            --ram_address <= "000";
+            address <= (others => '0');
+            valid_out_temp <= '0';
+            address <= "000";
             
         elsif rising_edge(CLK) then
 
-            case cnt is
-                when "000"  => mac_init <= '1'; valid_out_temp1 <= '0';
-                when "111"  => mac_init <= '0'; valid_out_temp1 <= '1';
-                when others => mac_init <= '0'; valid_out_temp1 <= '0';
+            case address is
+                when "000"  => mac_init <= '1'; valid_out_temp <= '0';
+                when "111"  => mac_init <= '0'; valid_out_temp <= '1';
+                when others => mac_init <= '0'; valid_out_temp <= '0';
             end case;
             
-            --rom_address <= cnt;
-            --ram_address <= cnt;
-            
-            cnt <= cnt + 1;
+            address <= address + 1;
 
         end if;            
     end process;
     
     process (CLK, RST)
     begin
-    if rst = '1' then
-    --mac_init <= '0';
-    --valid_out_temp1 <= '0';
-    valid_out <= '0';
-    elsif rising_edge(CLK) then
-    --mac_init <= mac_internal;
-    --valid_out_temp1 <= valid_out_temp2;
-    valid_out <= valid_out_temp1;
-    end if;
+        if rst = '1' then
+            valid_out <= '0';
+        elsif rising_edge(CLK) then
+            valid_out <= valid_out_temp;
+        end if;
     end process;
     
 end behavioral;
