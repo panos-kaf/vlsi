@@ -69,7 +69,7 @@ rst <= '1';
 wait for 160 ns;
 rst <= '0';
 
-wait for 160 ns;
+--wait for 160 ns;
 
 x <= std_logic_vector(to_unsigned(208, 8));
 wait for 160 ns;

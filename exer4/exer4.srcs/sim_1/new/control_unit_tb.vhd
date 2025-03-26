@@ -10,7 +10,7 @@ component CU is
     port(
         CLK, RST, valid_in: in std_logic;
         mac_init, valid_to_ram, valid_out: out std_logic;
-        address: out std_logic_vector (2 downto 0)
+        address: inout std_logic_vector (2 downto 0)
     );
 end component;
 

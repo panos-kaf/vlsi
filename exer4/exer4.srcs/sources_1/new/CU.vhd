@@ -12,8 +12,7 @@ end CU;
 
 architecture behavioral of CU is
 
-signal rom_internal, ram_internal: std_logic_vector (2 downto 0) := (others => '0');
-signal mac_internal, valid_out_temp: std_logic;
+signal valid_out_temp: std_logic;
 
 begin
     
