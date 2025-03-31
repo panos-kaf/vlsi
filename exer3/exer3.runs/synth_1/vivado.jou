@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Mar 19 09:54:43 2025
-# Process ID: 15513
+# Start of session at: Sat Mar 22 17:58:07 2025
+# Process ID: 10764
 # Current directory: /home/user/vlsi/exer3/exer3.runs/synth_1
-# Command line: vivado -log pipelined_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipelined_adder.tcl
-# Log file: /home/user/vlsi/exer3/exer3.runs/synth_1/pipelined_adder.vds
+# Command line: vivado -log fulladder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fulladder.tcl
+# Log file: /home/user/vlsi/exer3/exer3.runs/synth_1/fulladder.vds
 # Journal file: /home/user/vlsi/exer3/exer3.runs/synth_1/vivado.jou
-# Running On: 33203d5a13bd, OS: Linux, CPU Frequency: , CPU Physical cores: 1, Host memory: 8217 MB
+# Running On: adceb3a7492d, OS: Linux, CPU Frequency: , CPU Physical cores: 1, Host memory: 8217 MB
 #-----------------------------------------------------------
-source pipelined_adder.tcl -notrace
+source fulladder.tcl -notrace

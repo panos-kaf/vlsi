@@ -1,2 +1,6 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/exer3/exer3.srcs/sources_1/new/systolic_multiplier.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'systolic_multiplier'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/exer3/exer3.srcs/sources_1/new/dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dff'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/exer3/exer3.srcs/sources_1/new/pipelined_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pipelined_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/exer3/exer3.srcs/sim_1/new/pipelined_adder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pipelined_adder_tb'
