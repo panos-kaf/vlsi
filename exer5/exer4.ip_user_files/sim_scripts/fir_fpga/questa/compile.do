@@ -1,0 +1,48 @@
+vlib questa_lib/work
+vlib questa_lib/msim
+
+vlib questa_lib/msim/xilinx_vip
+vlib questa_lib/msim/xil_defaultlib
+vlib questa_lib/msim/lib_cdc_v1_0_2
+vlib questa_lib/msim/proc_sys_reset_v5_0_13
+
+vmap xilinx_vip questa_lib/msim/xilinx_vip
+vmap xil_defaultlib questa_lib/msim/xil_defaultlib
+vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
+vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
+
+vlog -work xilinx_vip  -incr -mfcu  -sv -L axi_vip_v1_1_13 -L processing_system7_vip_v1_0_15 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
+"C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/fir_fpga/ipshared/2c6b/hdl/FIR_AXI_v1_0_FIR_AXI.vhd" \
+"../../../bd/fir_fpga/ipshared/2c6b/hdl/FIR_AXI_v1_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_FIR_AXI_0_0/sim/fir_fpga_FIR_AXI_0_0.vhd" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_processing_system7_0_0/fir_fpga_processing_system7_0_0_sim_netlist.vhdl" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_xbar_0/fir_fpga_xbar_0_sim_netlist.vhdl" \
+
+vcom -work lib_cdc_v1_0_2  -93  \
+"../../../../exer4.gen/sources_1/bd/fir_fpga/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+
+vcom -work proc_sys_reset_v5_0_13  -93  \
+"../../../../exer4.gen/sources_1/bd/fir_fpga/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/fir_fpga/ip/fir_fpga_rst_ps7_0_100M_0/sim/fir_fpga_rst_ps7_0_100M_0.vhd" \
+"../../../bd/fir_fpga/ipshared/ccc4/hdl/fir_filter_v1_0_FIR.vhd" \
+"../../../bd/fir_fpga/ipshared/ccc4/hdl/fir_filter_v1_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_fir_filter_0_0/sim/fir_fpga_fir_filter_0_0.vhd" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_auto_pc_0/fir_fpga_auto_pc_0_sim_netlist.vhdl" \
+"../../../bd/fir_fpga/sim/fir_fpga.vhd" \
+
+vlog -work xil_defaultlib \
+"glbl.v"
+

@@ -1,0 +1,14 @@
+vhdl xil_defaultlib  \
+"../../../bd/fir_fpga/ipshared/2c6b/hdl/FIR_AXI_v1_0_FIR_AXI.vhd" \
+"../../../bd/fir_fpga/ipshared/2c6b/hdl/FIR_AXI_v1_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_FIR_AXI_0_0/sim/fir_fpga_FIR_AXI_0_0.vhd" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_processing_system7_0_0/fir_fpga_processing_system7_0_0_sim_netlist.vhdl" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_xbar_0/fir_fpga_xbar_0_sim_netlist.vhdl" \
+"../../../bd/fir_fpga/ip/fir_fpga_rst_ps7_0_100M_0/sim/fir_fpga_rst_ps7_0_100M_0.vhd" \
+"../../../bd/fir_fpga/ipshared/ccc4/hdl/fir_filter_v1_0_FIR.vhd" \
+"../../../bd/fir_fpga/ipshared/ccc4/hdl/fir_filter_v1_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_fir_filter_0_0/sim/fir_fpga_fir_filter_0_0.vhd" \
+"c:/Users/spiros/VivadoProjects/github/exer4/exer4.gen/sources_1/bd/fir_fpga/ip/fir_fpga_auto_pc_0/fir_fpga_auto_pc_0_sim_netlist.vhdl" \
+"../../../bd/fir_fpga/sim/fir_fpga.vhd" \
+
+nosort

@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/user/vlsi/exer4/exer4.srcs/sim_1/new/control_unit_tb.vhd,1742990455,vhdl,,,,control_unit_tb,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sim_1/new/fir_tb.vhd,1742990946,vhdl,,,,fir_tb,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sim_1/new/mac_tb.vhd,1742844871,vhdl,,,,mac_tb,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sim_1/new/ram_tb.vhd,1742987305,vhdl,,,,ram_tb,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sources_1/new/CU.vhd,1742988808,vhdl,,,,cu,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sources_1/new/FIR.vhd,1742987568,vhdl,,,,fir,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sources_1/new/MAC.vhd,1742987143,vhdl,,,,mac,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sources_1/new/RAM.vhd,1742986928,vhdl,,,,ram,,,,,,,,
+/home/user/vlsi/exer4/exer4.srcs/sources_1/new/ROM.vhd,1742830240,vhdl,,,,rom,,,,,,,,

@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto  -L xil_defaultlib -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L xilinx_vip -L secureip -L xpm --snapshot fir_fpga xil_defaultlib.fir_fpga -log elaborate.log
