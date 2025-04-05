@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+
+#define BASE_ADDRESS 0x43C00000
+#define REG0_OFFSET 0x00
+#define REG1_OFFSET 0x04
+
+#define VALID_IN 8
+#define VALID_OUT 19
+
+int main()
+{
+    init_platform();
+    int N = 4;
+    uint32_t reset = 0x00000100;
+
+    uint32_t input[] = {252,240,300,400};
+    uint32_t output[N];
+
+    for (int i = 0; i < N; i++)
+    	input[i]+= 1 << VALID_IN;
+
+	Xil_Out(BASE_ADDRESS + REG0_OFFSET, reset);
+
+    for (int i = 0; i < N; i++){
+    	Xil_Out(BASE_ADDRESS + REG0_OFFSET, input[i]);
+    	Xil_In(BASE_ADDRESS + REG1_OFFSET, output[i]);
+    }
+
+    for (int i = 0; i < N; i++)
+    	xil_printf("%d\n",output[i] - 1 << VALID_OUT);
+
+    cleanup_platform();
+    return 0;
+}
