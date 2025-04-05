@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="FIR_slave_interface_0_synth_1" LaunchDir="/home/user/vlsi/vivado/exer5test/exer5test.runs/FIR_slave_interface_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-

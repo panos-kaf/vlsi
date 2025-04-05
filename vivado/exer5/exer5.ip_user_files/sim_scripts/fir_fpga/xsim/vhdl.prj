@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/fir_fpga/ipshared/afde/src/CU.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/src/FIR.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/src/MAC.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/src/RAM.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/src/ROM.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/hdl/fir_v1_0_S00_AXI.vhd" \
+"../../../bd/fir_fpga/ipshared/afde/hdl/fir_v1_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_fir_0_0/sim/fir_fpga_fir_0_0.vhd" \
+"../../../bd/fir_fpga/ip/fir_fpga_rst_ps7_0_100M_0/sim/fir_fpga_rst_ps7_0_100M_0.vhd" \
+"../../../bd/fir_fpga/sim/fir_fpga.vhd" \
+
+nosort
