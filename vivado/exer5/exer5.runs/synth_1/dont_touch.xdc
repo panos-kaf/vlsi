@@ -7,14 +7,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga ||
 # IP: bd/fir_fpga/ip/fir_fpga_processing_system7_0_0/fir_fpga_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_processing_system7_0_0 || ORIG_REF_NAME==fir_fpga_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/fir_fpga/ip/fir_fpga_fir_0_0/fir_fpga_fir_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_fir_0_0 || ORIG_REF_NAME==fir_fpga_fir_0_0} -quiet] -quiet
-
 # IP: bd/fir_fpga/ip/fir_fpga_ps7_0_axi_periph_0/fir_fpga_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_ps7_0_axi_periph_0 || ORIG_REF_NAME==fir_fpga_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/fir_fpga/ip/fir_fpga_rst_ps7_0_100M_0/fir_fpga_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_rst_ps7_0_100M_0 || ORIG_REF_NAME==fir_fpga_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/fir_fpga/ip/fir_fpga_fir_0_0/fir_fpga_fir_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_fir_0_0 || ORIG_REF_NAME==fir_fpga_fir_0_0} -quiet] -quiet
 
 # IP: bd/fir_fpga/ip/fir_fpga_auto_pc_0/fir_fpga_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fir_fpga_auto_pc_0 || ORIG_REF_NAME==fir_fpga_auto_pc_0} -quiet] -quiet
