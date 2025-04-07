@@ -8,11 +8,11 @@ entity RAM is
 	 );
     port (clk  : in std_logic;
           rst  : in std_logic;
-          we   : in std_logic;						--- memory write enable
-	      en   : in std_logic;				--- operation enable
-          addr : in std_logic_vector(2 downto 0);			-- memory address
-          di   : in std_logic_vector(data_width-1 downto 0);		-- input data
-          do   : out std_logic_vector(data_width-1 downto 0);		-- output data
+          we   : in std_logic;										--- memory write enable
+	      en   : in std_logic;										--- operation enable
+          addr : in std_logic_vector(2 downto 0);					--- memory address
+          di   : in std_logic_vector(data_width-1 downto 0);		--- input data
+          do   : out std_logic_vector(data_width-1 downto 0);		--- output data
           ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: out std_logic_vector(data_width -1 downto 0)
           );
 
@@ -37,7 +37,7 @@ begin
                     RAM(7 downto 1) <= RAM(6 downto 0); 
                     RAM(0) <= di;
                     do <= di;
-                else						-- read operation
+                else							-- read operation
                     do <= RAM( conv_integer(addr));
                 end if;
             end if;
