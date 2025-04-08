@@ -1,7 +1,37 @@
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+
 #include <stdio.h>
 #include "platform.h"
-//#include <xgpio.h>
-//#include "xparameters.h"
+#include "xil_printf.h"
+
+
+int main()
+{
+    init_platform();
+
+    print("Hello World\n\r");
+    print("Successfully ran Hello World application");
+    cleanup_platform();
+    return 0;
+}
+*/
+
+#include <stdio.h>
+#include <stdint.h>
+#include <xil_io.h>
+#include "platform.h"
 
 #define BASE_ADDRESS 0x43C00000
 #define REG0_OFFSET 0x00
@@ -16,21 +46,22 @@ int main()
     init_platform();
     int N = 4;
 
-    uint32_t input[] = {252,240,300,400};
-    uint32_t output[N];
-
-    for (int i = 0; i < N; i++)
-    	input[i]+= 1 << VALID_IN;
-
-	Xil_Out(BASE_ADDRESS + REG0_OFFSET, RESET);
+    int input[] = {252,240,300,400};
+    int output[N];
 
     for (int i = 0; i < N; i++){
-    	Xil_Out(BASE_ADDRESS + REG0_OFFSET, input[i]);
-    	Xil_In(BASE_ADDRESS + REG1_OFFSET, output[i]);
+    	input[i]+= 1 << VALID_IN;
+    }
+
+	Xil_Out32(BASE_ADDRESS + REG0_OFFSET, RESET);
+
+    for (int i = 0; i < N; i++){
+    	Xil_Out32(BASE_ADDRESS + REG0_OFFSET, input[i]);
+    	output[i] = Xil_In32(BASE_ADDRESS + REG1_OFFSET);
     }
 
     for (int i = 0; i < N; i++)
-    	xil_printf("%d\n",output[i] - 1 << VALID_OUT);
+    	xil_printf("%d\n",output[i] - (1 << VALID_OUT));
 
     cleanup_platform();
     return 0;
