@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity MAC is
     port(
-        CLK, RST, mac_init: in std_logic;
+        CLK, RST, mac_init, sleep: in std_logic;
         x, h: in std_logic_vector ( 7 downto 0);
         y: inout std_logic_vector (18 downto 0)
     );
@@ -22,13 +22,19 @@ begin
     
     elsif rising_edge(CLK) then
     
-        if mac_init = '1' then
-            y <= std_logic_vector(resize(unsigned(x) * unsigned(h),19));
-        else 
-            y <= y + x*h;
-        end if;
+        if sleep = '0' then 
+            if mac_init = '1' then
+                y <= std_logic_vector(resize(unsigned(x) * unsigned(h),19));
+            else 
+             y <= y + x*h;
+            end if;
     
-    end if;
+       end if;
+       
+        else
+            y <= y;
+   end if;
+   
 
 end process;
 end behavioral;

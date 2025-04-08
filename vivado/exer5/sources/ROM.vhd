@@ -9,8 +9,7 @@ entity ROM is
     Port ( clk : in  STD_LOGIC;
 		   en : in  STD_LOGIC;				--- operation enable
            addr : in  STD_LOGIC_VECTOR (2 downto 0);			-- memory address
-           rom_out : out  STD_LOGIC_VECTOR (coeff_width-1 downto 0);	-- output data
-           ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : out std_logic_vector(coeff_width-1 downto 0)
+           rom_out : out  STD_LOGIC_VECTOR (coeff_width-1 downto 0)	-- output data
            );
 end ROM;
 
@@ -33,15 +32,6 @@ begin
             end if;
         end if;
     end process;			
-
-    ROM0 <= rom(0);
-    ROM1 <= rom(1);
-    ROM2 <= rom(2);
-    ROM3 <= rom(3);
-    ROM4 <= rom(4);
-    ROM5 <= rom(5);
-    ROM6 <= rom(6);
-    ROM7 <= rom(7);
 
 end behavioral;
 
