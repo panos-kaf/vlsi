@@ -13,13 +13,9 @@ component FIR is
          x: in std_logic_vector (7 downto 0);
          y: inout std_logic_vector (18 downto 0);
          valid_out: out std_logic;
-         valid_debug: out std_logic;
-         mac_init: out std_logic;
-         --ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: out std_logic_vector (7 downto 0);
-         --ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : out std_logic_vector(7 downto 0);
-         address : out std_logic_vector (2 downto 0);
-         x_debug, h_debug : out std_logic_vector (7 downto 0)
-    );
+         sleep_debug: out std_logic;
+         valid_prev: out std_logic
+         );
 end component;
 
 signal clk: std_logic;
@@ -28,22 +24,12 @@ signal valid_in: std_logic;
 signal x: std_logic_vector (7 downto 0);
 signal y: std_logic_vector (18 downto 0) := (others => '0');
 signal valid_out: std_logic;
-signal valid_debug: std_logic;
-signal mac_init: std_logic;
---signal ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7: std_logic_vector(7 downto 0);
---signal ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : std_logic_vector(7 downto 0);
-signal address : std_logic_vector (2 downto 0);
-signal x_debug, h_debug : std_logic_vector (7 downto 0);
-
+signal sleep_debug: std_logic;
+signal valid_prev: std_logic;
 
 begin
 
-DUT: FIR port map(clk, rst, valid_in, x, y, 
-                  valid_out, valid_debug, mac_init, 
-                  --ram0,ram1,ram2,ram3,ram4,ram5,ram6,ram7, 
-                  --ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7,
-                  address, x_debug, h_debug
-                  );
+DUT: FIR port map(clk, rst, valid_in, x, y, valid_out, sleep_debug, valid_prev);
 
 GEN_CLK: process
 begin
@@ -56,9 +42,10 @@ end process;
 INPUT: process
 begin
     valid_in <= '1';
-    wait for 20 ns;
+    wait for 2000 ns;
     valid_in <= '0';
-    wait for 140 ns;
+    wait for 120 ns;
+	--wait for 500 ns;
 end process;
 
 STIMULUS: process
@@ -70,10 +57,25 @@ wait for 160 ns;
 rst <= '0';
 
 --wait for 160 ns;
+x <= std_logic_vector(to_unsigned(1, 8));
+wait for 160 ns;
+
+x <= std_logic_vector(to_unsigned(2, 8));
+wait for 160 ns;
+
+x <= std_logic_vector(to_unsigned(0, 8));
+wait for 160 ns;
+
+x <= std_logic_vector(to_unsigned(0, 8));
+wait for 160 ns;
+
+x <= std_logic_vector(to_unsigned(0, 8));
+wait for 160 ns;
+
+wait for 1000 ns;
 
 x <= std_logic_vector(to_unsigned(208, 8));
 wait for 160 ns;
-
 
 x <= std_logic_vector(to_unsigned(231, 8));
 wait for 160 ns;
@@ -124,7 +126,6 @@ wait for 160 ns;
 x <= std_logic_vector(to_unsigned(107, 8));
 wait for 160 ns;
 
-
 x <= std_logic_vector(to_unsigned(234, 8));
 wait for 160 ns;
 
@@ -133,7 +134,6 @@ wait for 160 ns;
 
 x <= std_logic_vector(to_unsigned(245, 8));
 wait for 160 ns;
-
 
 wait for 320 ns;
 wait;
