@@ -7,7 +7,8 @@ entity FIR is
          x: in std_logic_vector (7 downto 0);
          y: inout std_logic_vector (18 downto 0);
          valid_out: out std_logic;
-         sleep_debug: out std_logic
+         sleep_debug: out std_logic;
+         valid_prev: out std_logic
     );
 end FIR;
 
@@ -18,7 +19,8 @@ component CU
         CLK, RST, valid_in: in std_logic;
         mac_init, valid_out, sleep: out std_logic;
         valid_to_ram: inout std_logic;
-        address : inout std_logic_vector (2 downto 0)
+        address : inout std_logic_vector (2 downto 0);
+        valid_prev: out std_logic
     );
 end component;
 
@@ -57,13 +59,14 @@ component ROM
 end component;
 
 signal address_internal, rom_internal, ram_internal: std_logic_vector (2 downto 0);
-signal mac_init_internal, sleep_internal: std_logic;
+signal mac_init_internal, sleep_internal, valid_prev_internal: std_logic;
 signal x_internal, h_internal: std_logic_vector (7 downto 0);
 signal valid_to_ram: std_logic;
 
 begin
 
 sleep_debug <= sleep_internal;
+valid_prev <= valid_prev_internal;
 
 control_unit: CU port map(
                           CLK => CLK,
@@ -73,7 +76,8 @@ control_unit: CU port map(
                           valid_to_ram => valid_to_ram,
                           valid_out => valid_out,
                           sleep => sleep_internal,
-                          address => address_internal
+                          address => address_internal,
+                          valid_prev => valid_prev
                           );
  
 rom_unit: ROM port map(
