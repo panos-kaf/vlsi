@@ -1,0 +1,6 @@
+21:31:24 **** Build of configuration Emulation-SW for project best2_system ****
+make all 
+Package not supported, if the system project is in Emulation Target, and only Baremetal Or Embedded Linux Applications present
+
+21:31:33 Build Finished (took 8s.959ms)
+

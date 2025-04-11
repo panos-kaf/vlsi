@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "/home/user/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../exer5.gen/sources_1/bd/fir_fpga/ipshared/ec67/hdl" --include "../../../../exer5.gen/sources_1/bd/fir_fpga/ipshared/ee60/hdl" \
+"../../../bd/fir_fpga/ip/fir_fpga_processing_system7_0_0/sim/fir_fpga_processing_system7_0_0.v" \
+"../../../bd/fir_fpga/ip/fir_fpga_auto_pc_0/sim/fir_fpga_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

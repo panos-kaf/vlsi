@@ -1,0 +1,10 @@
+12:05:26 **** Incremental Build of configuration Hardware for project best_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 63403 C:/VITIS/fir_fpga_best/export/fir_fpga_best/fir_fpga_best.xpfm standalone_ps7_cortexa9_0 C:/VITIS/best_system/Hardware/system.bif
+sdcard_gen --xpfm C:/VITIS/fir_fpga_best/export/fir_fpga_best/fir_fpga_best.xpfm --sys_config fir_fpga_best --bif C:/VITIS/best_system/Hardware/system.bif --bitstream C:/VITIS/best/_ide/bitstream/fir_fpga_best.bit --elf C:/VITIS/best/Debug/best.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/VITIS/best/_ide/bitstream/fir_fpga_best.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/VITIS/best_system/Hardware/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+12:05:35 Build Finished (took 8s.944ms)
+

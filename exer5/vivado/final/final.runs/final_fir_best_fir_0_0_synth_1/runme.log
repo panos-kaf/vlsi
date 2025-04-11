@@ -1,0 +1,275 @@
+
+*** Running vivado
+    with args -log final_fir_best_fir_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_fir_best_fir_0_0.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source final_fir_best_fir_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 421.152 ; gain = 93.348
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/VLSI/vivado/ip_repo/fir_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/vlsi3/vivado/ip_repo/best_fir_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: final_fir_best_fir_0_0
+Command: synth_design -top final_fir_best_fir_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24368
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1237.172 ; gain = 407.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'final_fir_best_fir_0_0' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ip/final_fir_best_fir_0_0/synth/final_fir_best_fir_0_0.vhd:82]
+	Parameter C_best_fir_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_best_fir_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'best_fir_v1_0' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0.vhd:5' bound to instance 'U0' of component 'best_fir_v1_0' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ip/final_fir_best_fir_0_0/synth/final_fir_best_fir_0_0.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'best_fir_v1_0' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0.vhd:49]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'best_fir_v1_0_best_fir' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0_best_fir.vhd:5' bound to instance 'best_fir_v1_0_best_fir_inst' of component 'best_fir_v1_0_best_fir' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'best_fir_v1_0_best_fir' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0_best_fir.vhd:86]
+INFO: [Synth 8-226] default block is never used [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0_best_fir.vhd:362]
+INFO: [Synth 8-3491] module 'FIR' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:4' bound to instance 'fir_instance' of component 'fir' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0_best_fir.vhd:396]
+INFO: [Synth 8-638] synthesizing module 'FIR' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:13]
+INFO: [Synth 8-3491] module 'CU' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/CU.vhd:5' bound to instance 'control_unit' of component 'CU' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'CU' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/CU.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'CU' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/CU.vhd:13]
+INFO: [Synth 8-3491] module 'ROM' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/ROM.vhd:5' bound to instance 'rom_unit' of component 'ROM' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'ROM' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/ROM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/ROM.vhd:16]
+INFO: [Synth 8-3491] module 'RAM' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/RAM.vhd:5' bound to instance 'ram_unit' of component 'RAM' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'RAM' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/RAM.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/RAM.vhd:20]
+INFO: [Synth 8-3491] module 'MAC' declared at 'c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/MAC.vhd:6' bound to instance 'mac_unit' of component 'MAC' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'MAC' [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/MAC.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'MAC' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/MAC.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'FIR' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/src/FIR.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'best_fir_v1_0_best_fir' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0_best_fir.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'best_fir_v1_0' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ipshared/5b59/hdl/best_fir_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'final_fir_best_fir_0_0' (0#1) [c:/vlsi3/vivado/final/final.gen/sources_1/bd/final_fir/ip/final_fir_best_fir_0_0/synth/final_fir_best_fir_0_0.vhd:82]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module best_fir_v1_0_best_fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module best_fir_v1_0_best_fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module best_fir_v1_0_best_fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module best_fir_v1_0_best_fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module best_fir_v1_0_best_fir is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module best_fir_v1_0_best_fir is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1333.895 ; gain = 503.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1333.895 ; gain = 503.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1333.895 ; gain = 503.766
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1333.895 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1434.656 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1434.656 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               19 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input   19 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port best_fir_awprot[2] in module final_fir_best_fir_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port best_fir_awprot[1] in module final_fir_best_fir_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port best_fir_awprot[0] in module final_fir_best_fir_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port best_fir_arprot[2] in module final_fir_best_fir_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port best_fir_arprot[1] in module final_fir_best_fir_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port best_fir_arprot[0] in module final_fir_best_fir_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     2|
+|3     |LUT2   |    15|
+|4     |LUT3   |    21|
+|5     |LUT4   |    24|
+|6     |LUT5   |    28|
+|7     |LUT6   |    58|
+|8     |FDCE   |   100|
+|9     |FDRE   |   141|
+|10    |FDSE   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1434.656 ; gain = 503.766
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1434.656 ; gain = 604.527
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1434.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1434.656 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 4376f72c
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1434.656 ; gain = 979.332
+INFO: [Common 17-1381] The checkpoint 'C:/vlsi3/vivado/final/final.runs/final_fir_best_fir_0_0_synth_1/final_fir_best_fir_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP final_fir_best_fir_0_0, cache-ID = f1c367fed6b10a2e
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/vlsi3/vivado/final/final.runs/final_fir_best_fir_0_0_synth_1/final_fir_best_fir_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file final_fir_best_fir_0_0_utilization_synth.rpt -pb final_fir_best_fir_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 12:10:07 2025...

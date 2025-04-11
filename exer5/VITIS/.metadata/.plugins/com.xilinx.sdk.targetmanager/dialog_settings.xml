@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="&lt;None&gt;-bitFile" value="C:\VITIS\fir_fpga_best_1\hw\fir_fpga_best.bit"/>
+	<item key="&lt;None&gt;-bmmFile" value=""/>
+	<item key="&lt;None&gt;-target" value="Local"/>
+	<item key="&lt;None&gt;-device" value="Auto Detect"/>
+	<item key="&lt;None&gt;-partial_bit" value="false"/>
+	<item key="&lt;None&gt;-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="bestest_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo 210279A42CB4A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo-210279A42CB4A-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo-210279A42CB4A-13722093-0&quot;}}]}"/>
+	<item key="bestest_system-bitFile" value="C:\vlsi2\vivado\exer5\exer5.runs\impl_1\fir_fpga_wrapper.bit"/>
+	<item key="bestest_system-bmmFile" value=""/>
+	<item key="bestest_system-target" value="Local"/>
+	<item key="bestest_system-device" value="Auto Detect"/>
+	<item key="bestest_system-partial_bit" value="false"/>
+	<item key="bestest_system-skip_rev_check" value="false"/>
+</section>

@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
+
+entity ROM is
+	 generic (
+		coeff_width : integer := 8  				--- width of coefficients (bits)
+	 );
+    Port ( clk : in  STD_LOGIC;
+		   en : in  STD_LOGIC;				--- operation enable
+           addr : in  STD_LOGIC_VECTOR (2 downto 0);			-- memory address
+           rom_out : out  STD_LOGIC_VECTOR (coeff_width-1 downto 0);	-- output data
+           ROM0, ROM1, ROM2, ROM3, ROM4, ROM5, ROM6, ROM7 : out std_logic_vector(coeff_width-1 downto 0)
+           );
+end ROM;
+
+architecture behavioral of ROM is
+
+    type rom_type is array (7 downto 0) of std_logic_vector (coeff_width-1 downto 0);                 
+    signal rom : rom_type:= ("00001000", "00000111", "00000110", "00000101", "00000100", "00000011", "00000010",
+                             "00000001");      				 -- initialization of rom with user data                 
+
+    signal rdata : std_logic_vector(coeff_width-1 downto 0) := (others => '0');
+begin
+
+    rdata <= rom(conv_integer(addr));
+
+    process (clk)
+    begin
+        if (clk'event and clk = '1') then
+            if (en = '1') then
+                rom_out <= rdata;
+            end if;
+        end if;
+    end process;			
+
+    ROM0 <= rom(0);
+    ROM1 <= rom(1);
+    ROM2 <= rom(2);
+    ROM3 <= rom(3);
+    ROM4 <= rom(4);
+    ROM5 <= rom(5);
+    ROM6 <= rom(6);
+    ROM7 <= rom(7);
+
+end behavioral;
+
+
+

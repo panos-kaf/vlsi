@@ -1,0 +1,10 @@
+16:36:46 **** Incremental Build of configuration Debug for project bestest_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54097 C:/VITIS/fir2_wrapper/export/fir2_wrapper/fir2_wrapper.xpfm standalone_ps7_cortexa9_0 C:/VITIS/bestest_system/Debug/system.bif
+sdcard_gen --xpfm C:/VITIS/fir2_wrapper/export/fir2_wrapper/fir2_wrapper.xpfm --sys_config fir2_wrapper --bif C:/VITIS/bestest_system/Debug/system.bif --bitstream C:/VITIS/bestest/_ide/bitstream/fir2_wrapper.bit --elf C:/VITIS/bestest/Debug/bestest.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/VITIS/bestest/_ide/bitstream/fir2_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/VITIS/bestest_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:36:57 Build Finished (took 11s.363ms)
+

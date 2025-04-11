@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="best" location="C:/VITIS/best" platform="C:/VITIS/fir_fpga_best/export/fir_fpga_best/fir_fpga_best.xpfm" platformUID="xilinx:zybo:fir_platform:0.0(custom)" systemProject="best_system" sysConfig="fir_fpga_best" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="a3367ef15fbff0f4bfdc007a8d33e680">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.449620787">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1103231914" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

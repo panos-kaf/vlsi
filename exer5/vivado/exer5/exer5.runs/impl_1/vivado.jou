@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Apr  7 12:33:23 2025
+# Process ID: 2055
+# Current directory: /home/user/vlsi/vivado/exer5/exer5.runs/impl_1
+# Command line: vivado -log fir_fpga_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source fir_fpga_wrapper.tcl -notrace
+# Log file: /home/user/vlsi/vivado/exer5/exer5.runs/impl_1/fir_fpga_wrapper.vdi
+# Journal file: /home/user/vlsi/vivado/exer5/exer5.runs/impl_1/vivado.jou
+# Running On: 97f83542f550, OS: Linux, CPU Frequency: , CPU Physical cores: 1, Host memory: 8322 MB
+#-----------------------------------------------------------
+source fir_fpga_wrapper.tcl -notrace

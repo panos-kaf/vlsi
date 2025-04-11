@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <xil_io.h>
+#include "platform.h"
+#include <sleep.h>
+
+#define BASE_ADDRESS 0x43C00000
+#define REG0_OFFSET 0x00
+#define REG1_OFFSET 0x04
+
+#define VALID_IN 8
+#define VALID_OUT 19
+#define RESET 0x00000200
+
+int main()
+{
+    init_platform();
+    int N = 20;
+
+    //unsigned input[] = {208,231,32,233};
+    unsigned input[N];
+    unsigned output[N];
+    unsigned debug1[N];
+
+
+    for (int i = 0; i < N; i++){
+    	scanf("%u", &input[i]);
+    	input[i]+= 1 << VALID_IN;
+    }
+
+	Xil_Out32(BASE_ADDRESS + REG0_OFFSET, RESET);
+
+    for (int i = 0; i < N; i++){
+
+    	Xil_Out32(BASE_ADDRESS + REG0_OFFSET,0);
+    	usleep(100);
+    	Xil_Out32(BASE_ADDRESS + REG0_OFFSET, input[i]);
+    	//Xil_Out32(BASE_ADDRESS + REG0_OFFSET, input[i]&~VALID_IN);
+
+    	usleep(10);
+    	debug1[i] = Xil_In32(BASE_ADDRESS + REG0_OFFSET);
+    	xil_printf("0x%08X debug input\n", debug1[i]);
+
+    	//Xil_Out32(BASE_ADDRESS + REG0_OFFSET, 0);
+
+    	while(1){
+    		output[i] = Xil_In32(BASE_ADDRESS + REG1_OFFSET);
+    		xil_printf("0x%08X debug output\n", output[i]);
+    		if (output[i] & (1 << VALID_OUT)) break;
+    	}
+
+    }
+
+    for (int i = 0; i < N; i++)
+    	//xil_printf("%u\n",output[i] - (1 << VALID_OUT));
+    	xil_printf("0x%08X\n", output[i]);
+    cleanup_platform();
+    return 0;
+}

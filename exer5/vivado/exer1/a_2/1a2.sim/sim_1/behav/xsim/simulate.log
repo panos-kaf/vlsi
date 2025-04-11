@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Note: All test cases passed!
+Time: 80 ns  Iteration: 0  Process: /decoder_tb/line__27  File: /home/user/vlsi/exer1/a2/1a2.srcs/sim_1/new/decoder_testbench.vhd
+INFO: xsimkernel Simulation Memory Usage: 444180 KB (Peak: 501548 KB), Simulation CPU Usage: 60 ms

@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "pipelined_adder_tb_behav" "xil_defaultlib.pipelined_adder_tb" -log "elaborate.log" 

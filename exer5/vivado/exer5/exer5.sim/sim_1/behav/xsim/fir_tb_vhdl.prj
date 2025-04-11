@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sources/CU.vhd" \
+
+vhdl work  \
+"../../../../sources/FIR.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../sources/MAC.vhd" \
+"../../../../sources/RAM.vhd" \
+"../../../../sources/ROM.vhd" \
+"../../../../../exer4/exer4.srcs/sim_1/new/fir_tb.vhd" \
+
+# Do not sort compile order
+nosort

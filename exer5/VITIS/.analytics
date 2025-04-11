@@ -1,0 +1,142 @@
+timestamp=[2025-04-07 20:57:04], mode=WORKBENCH_START, duration=0:00:05.645, duration_ms=5645, data={}
+timestamp=[2025-04-07 20:57:04], mode=WORKBENCH_UI_INIT, duration=0:00:00.664, duration_ms=664, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-04-07 20:57:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.450, duration_ms=450, data={}
+timestamp=[2025-04-07 20:57:26], mode=WORKBENCH_START, duration=0:00:05.437, duration_ms=5437, data={}
+timestamp=[2025-04-07 20:57:27], mode=WORKBENCH_UI_INIT, duration=0:00:00.680, duration_ms=680, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2025-04-07 20:57:28], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.420, duration_ms=420, data={}
+timestamp=[2025-04-07 20:58:49], mode=APP_CREATION, duration=0:00:25.103, duration_ms=25103, data={name=test, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=fir_fpga_wrapper2, application_type=application}
+timestamp=[2025-04-07 21:01:08], mode=PLATFORM_GENERATION, duration=0:00:27.079, duration_ms=27079, data={name=fir_fpga_wrapper2}
+timestamp=[2025-04-07 21:01:10], mode=BUILD, duration=0:00:02.008, duration_ms=2008, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2025-04-07 21:01:11], mode=BUILD, duration=0:00:00.356, duration_ms=356, data={name=test_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2025-04-07 21:11:45], mode=APP_CREATION, duration=0:00:24.681, duration_ms=24681, data={name=best, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=fir_fpga_best, application_type=application}
+timestamp=[2025-04-07 21:13:47], mode=PLATFORM_GENERATION, duration=0:00:42.632, duration_ms=42632, data={name=fir_fpga_best}
+timestamp=[2025-04-07 21:13:49], mode=BUILD, duration=0:00:01.932, duration_ms=1932, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-07 21:13:50], mode=BUILD, duration=0:00:00.337, duration_ms=337, data={name=best_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2025-04-07 21:28:22], mode=APP_CREATION, duration=0:00:24.365, duration_ms=24365, data={name=best2, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=fir_fpga_best_1, application_type=application}
+timestamp=[2025-04-07 21:31:22], mode=PLATFORM_GENERATION, duration=0:00:31.012, duration_ms=31012, data={name=fir_fpga_best_1}
+timestamp=[2025-04-07 21:31:23], mode=BUILD, duration=0:00:01.741, duration_ms=1741, data={name=best2, configuration=Debug, clean_build=false}
+timestamp=[2025-04-07 21:31:33], mode=BUILD, duration=0:00:08.975, duration_ms=8975, data={name=best2_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2025-04-08 17:04:39], mode=WORKBENCH_START, duration=0:00:26.959, duration_ms=26959, data={}
+timestamp=[2025-04-08 17:04:40], mode=WORKBENCH_UI_INIT, duration=0:00:01.704, duration_ms=1704, data={editors_count=15, platform_editors_count=9, projects_count=10, platform_projects_count=3, active_platform_editor=true, projects=RemoteSystemsTempFiles,best,best2,best2_system,best_system,fir_fpga_best,fir_fpga_best_1,fir_fpga_wrapper2,test,test_system}
+timestamp=[2025-04-08 17:04:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.080, duration_ms=1080, data={}
+timestamp=[2025-04-08 17:12:30], mode=BUILD, duration=0:00:03.626, duration_ms=3626, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:12:34], mode=BUILD, duration=0:00:01.836, duration_ms=1836, data={name=best_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2025-04-08 17:25:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.032, duration_ms=1032, data={}
+timestamp=[2025-04-08 17:25:43], mode=WORKBENCH_START, duration=0:00:37.314, duration_ms=37314, data={}
+timestamp=[2025-04-08 17:25:45], mode=WORKBENCH_UI_INIT, duration=0:00:01.907, duration_ms=1907, data={editors_count=15, platform_editors_count=9, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=RemoteSystemsTempFiles,best,best2,best2_system,best_system,fir_fpga_best,fir_fpga_best_1,fir_fpga_wrapper2,test,test_system}
+timestamp=[2025-04-08 17:29:29], mode=BUILD, duration=0:00:02.315, duration_ms=2315, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:29:55], mode=BUILD, duration=0:00:25.721, duration_ms=25721, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 17:30:30], mode=BUILD, duration=0:00:01.803, duration_ms=1803, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:30:52], mode=BUILD, duration=0:00:20.806, duration_ms=20806, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 17:35:51], mode=PLATFORM_GENERATION, duration=0:00:24.223, duration_ms=24223, data={name=fir_fpga_best}
+timestamp=[2025-04-08 17:35:51], mode=BUILD, duration=0:00:00.291, duration_ms=291, data={name=best, configuration=Debug, clean_build=true}
+timestamp=[2025-04-08 17:35:52], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=best_system, configuration=Hardware, clean_build=true}
+timestamp=[2025-04-08 17:36:59], mode=PLATFORM_GENERATION, duration=0:00:56.873, duration_ms=56873, data={name=fir_fpga_best}
+timestamp=[2025-04-08 17:37:04], mode=BUILD, duration=0:00:04.969, duration_ms=4969, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:37:28], mode=BUILD, duration=0:00:23.897, duration_ms=23897, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 17:44:39], mode=PLATFORM_GENERATION, duration=0:00:09.541, duration_ms=9541, data={name=fir_fpga_best}
+timestamp=[2025-04-08 17:44:41], mode=BUILD, duration=0:00:02.576, duration_ms=2576, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:45:03], mode=BUILD, duration=0:00:21.099, duration_ms=21099, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 17:50:42], mode=BUILD, duration=0:00:03.724, duration_ms=3724, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:51:07], mode=BUILD, duration=0:00:24.161, duration_ms=24161, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 17:58:49], mode=BUILD, duration=0:00:02.379, duration_ms=2379, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 17:59:00], mode=BUILD, duration=0:00:10.559, duration_ms=10559, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:03:14], mode=BUILD, duration=0:00:01.822, duration_ms=1822, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:03:25], mode=BUILD, duration=0:00:10.253, duration_ms=10253, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:03:51], mode=BUILD, duration=0:00:02.178, duration_ms=2178, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:04:05], mode=BUILD, duration=0:00:13.895, duration_ms=13895, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:10:36], mode=BUILD, duration=0:00:01.550, duration_ms=1550, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:10:45], mode=BUILD, duration=0:00:08.766, duration_ms=8766, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:13:19], mode=BUILD, duration=0:00:01.596, duration_ms=1596, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:13:28], mode=BUILD, duration=0:00:08.529, duration_ms=8529, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:19:27], mode=BUILD, duration=0:00:01.542, duration_ms=1542, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:19:36], mode=BUILD, duration=0:00:08.436, duration_ms=8436, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:29:21], mode=BUILD, duration=0:00:01.554, duration_ms=1554, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:29:29], mode=BUILD, duration=0:00:08.323, duration_ms=8323, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:35:53], mode=BUILD, duration=0:00:01.666, duration_ms=1666, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:36:02], mode=BUILD, duration=0:00:08.718, duration_ms=8718, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:39:47], mode=BUILD, duration=0:00:01.490, duration_ms=1490, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:39:56], mode=BUILD, duration=0:00:08.625, duration_ms=8625, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:45:15], mode=BUILD, duration=0:00:05.858, duration_ms=5858, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:45:24], mode=BUILD, duration=0:00:08.431, duration_ms=8431, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:53:46], mode=BUILD, duration=0:00:01.878, duration_ms=1878, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:53:55], mode=BUILD, duration=0:00:08.326, duration_ms=8326, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:55:31], mode=PLATFORM_GENERATION, duration=0:00:07.935, duration_ms=7935, data={name=fir_fpga_best}
+timestamp=[2025-04-08 18:55:31], mode=BUILD, duration=0:00:00.393, duration_ms=393, data={name=best, configuration=Debug, clean_build=true}
+timestamp=[2025-04-08 18:55:32], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=best_system, configuration=Hardware, clean_build=true}
+timestamp=[2025-04-08 18:56:05], mode=PLATFORM_GENERATION, duration=0:00:28.128, duration_ms=28128, data={name=fir_fpga_best}
+timestamp=[2025-04-08 18:56:07], mode=BUILD, duration=0:00:01.847, duration_ms=1847, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:56:15], mode=BUILD, duration=0:00:08.397, duration_ms=8397, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 18:58:54], mode=BUILD, duration=0:00:01.545, duration_ms=1545, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 18:59:05], mode=BUILD, duration=0:00:10.427, duration_ms=10427, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 19:10:04], mode=BUILD, duration=0:00:01.622, duration_ms=1622, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:11:14], mode=BUILD, duration=0:00:00.845, duration_ms=845, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:11:50], mode=BUILD, duration=0:00:01.029, duration_ms=1029, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:12:28], mode=BUILD, duration=0:00:01.502, duration_ms=1502, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:12:37], mode=BUILD, duration=0:00:08.201, duration_ms=8201, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 19:15:49], mode=BUILD, duration=0:00:01.591, duration_ms=1591, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:15:57], mode=BUILD, duration=0:00:08.312, duration_ms=8312, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 19:22:32], mode=BUILD, duration=0:00:01.921, duration_ms=1921, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:22:41], mode=BUILD, duration=0:00:08.563, duration_ms=8563, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 19:28:00], mode=BUILD, duration=0:00:01.584, duration_ms=1584, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 19:28:09], mode=BUILD, duration=0:00:08.689, duration_ms=8689, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 21:43:48], mode=APP_CREATION, duration=0:00:30.871, duration_ms=30871, data={name=bestest, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=fir2_wrapper, application_type=application}
+timestamp=[2025-04-08 21:47:12], mode=PLATFORM_GENERATION, duration=0:00:34.005, duration_ms=34005, data={name=fir2_wrapper}
+timestamp=[2025-04-08 21:47:14], mode=BUILD, duration=0:00:02.433, duration_ms=2433, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 21:47:25], mode=BUILD, duration=0:00:09.973, duration_ms=9973, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:20:50], mode=WORKBENCH_START, duration=0:00:15.246, duration_ms=15246, data={}
+timestamp=[2025-04-10 11:20:52], mode=WORKBENCH_UI_INIT, duration=0:00:01.712, duration_ms=1712, data={editors_count=7, platform_editors_count=3, projects_count=11, platform_projects_count=4, active_platform_editor=false, projects=RemoteSystemsTempFiles,best,best2,best2_system,best_system,bestest,bestest_system,fir2_wrapper,fir_fpga_best,fir_fpga_best_1,fir_fpga_wrapper2}
+timestamp=[2025-04-10 11:20:58], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:05.886, duration_ms=5886, data={}
+timestamp=[2025-04-10 11:26:21], mode=BUILD, duration=0:00:07.271, duration_ms=7271, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:26:43], mode=BUILD, duration=0:00:21.052, duration_ms=21052, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:27:33], mode=BUILD, duration=0:00:04.170, duration_ms=4170, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:27:52], mode=BUILD, duration=0:00:18.069, duration_ms=18069, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:38:16], mode=BUILD, duration=0:00:04.443, duration_ms=4443, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:38:37], mode=BUILD, duration=0:00:19.804, duration_ms=19804, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:40:14], mode=BUILD, duration=0:00:04.054, duration_ms=4054, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:40:34], mode=BUILD, duration=0:00:20.308, duration_ms=20308, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:43:21], mode=BUILD, duration=0:00:03.125, duration_ms=3125, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:43:40], mode=BUILD, duration=0:00:18.866, duration_ms=18866, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:53:22], mode=BUILD, duration=0:00:02.004, duration_ms=2004, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 11:53:31], mode=BUILD, duration=0:00:08.775, duration_ms=8775, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:05:26], mode=BUILD, duration=0:00:02.306, duration_ms=2306, data={name=best, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:05:35], mode=BUILD, duration=0:00:08.964, duration_ms=8964, data={name=best_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-10 12:06:53], mode=BUILD, duration=0:00:01.563, duration_ms=1563, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:07:02], mode=BUILD, duration=0:00:08.710, duration_ms=8710, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:09:38], mode=BUILD, duration=0:00:01.483, duration_ms=1483, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:09:47], mode=BUILD, duration=0:00:08.392, duration_ms=8392, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:12:53], mode=BUILD, duration=0:00:01.559, duration_ms=1559, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:13:02], mode=BUILD, duration=0:00:08.621, duration_ms=8621, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:13:18], mode=BUILD, duration=0:00:01.405, duration_ms=1405, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:13:26], mode=BUILD, duration=0:00:08.261, duration_ms=8261, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:19:51], mode=BUILD, duration=0:00:02.561, duration_ms=2561, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:20:01], mode=BUILD, duration=0:00:09.020, duration_ms=9020, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:21:14], mode=BUILD, duration=0:00:01.537, duration_ms=1537, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:21:22], mode=BUILD, duration=0:00:08.540, duration_ms=8540, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:22:06], mode=BUILD, duration=0:00:01.544, duration_ms=1544, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:22:15], mode=BUILD, duration=0:00:08.715, duration_ms=8715, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:32:44], mode=BUILD, duration=0:00:02.075, duration_ms=2075, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:32:53], mode=BUILD, duration=0:00:08.416, duration_ms=8416, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:39:01], mode=BUILD, duration=0:00:01.583, duration_ms=1583, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 12:39:10], mode=BUILD, duration=0:00:08.439, duration_ms=8439, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 16:21:07], mode=WORKBENCH_START, duration=0:00:08.120, duration_ms=8120, data={}
+timestamp=[2025-04-10 16:21:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.996, duration_ms=996, data={editors_count=6, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,bestest,bestest_system,fir2_wrapper}
+timestamp=[2025-04-10 16:21:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.410, duration_ms=410, data={}
+timestamp=[2025-04-10 16:36:45], mode=BUILD, duration=0:00:03.253, duration_ms=3253, data={name=bestest, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 16:36:57], mode=BUILD, duration=0:00:11.378, duration_ms=11378, data={name=bestest_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:40:57], mode=APP_CREATION, duration=0:00:36.382, duration_ms=36382, data={name=best_fir, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=best_fir_wrapper, application_type=application}
+timestamp=[2025-04-10 20:43:22], mode=PLATFORM_GENERATION, duration=0:00:40.976, duration_ms=40976, data={name=best_fir_wrapper}
+timestamp=[2025-04-10 20:43:25], mode=BUILD, duration=0:00:02.652, duration_ms=2652, data={name=best_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:43:36], mode=BUILD, duration=0:00:10.462, duration_ms=10462, data={name=best_fir_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:46:22], mode=BUILD, duration=0:00:01.892, duration_ms=1892, data={name=best_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:46:33], mode=BUILD, duration=0:00:10.181, duration_ms=10181, data={name=best_fir_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:48:55], mode=BUILD, duration=0:00:01.834, duration_ms=1834, data={name=best_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:49:06], mode=BUILD, duration=0:00:10.205, duration_ms=10205, data={name=best_fir_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:50:30], mode=BUILD, duration=0:00:01.824, duration_ms=1824, data={name=best_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:50:40], mode=BUILD, duration=0:00:09.940, duration_ms=9940, data={name=best_fir_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:53:27], mode=BUILD, duration=0:00:01.939, duration_ms=1939, data={name=best_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-10 20:53:37], mode=BUILD, duration=0:00:09.941, duration_ms=9941, data={name=best_fir_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-11 12:17:49], mode=APP_CREATION, duration=0:00:33.802, duration_ms=33802, data={name=bestest_fir, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=final_fir_wrapper, application_type=application}
+timestamp=[2025-04-11 12:22:25], mode=PLATFORM_GENERATION, duration=0:00:45.416, duration_ms=45416, data={name=final_fir_wrapper}
+timestamp=[2025-04-11 12:22:28], mode=BUILD, duration=0:00:03.014, duration_ms=3014, data={name=bestest_fir, configuration=Debug, clean_build=false}
+timestamp=[2025-04-11 12:22:40], mode=BUILD, duration=0:00:11.792, duration_ms=11792, data={name=bestest_fir_system, configuration=Debug, clean_build=false}

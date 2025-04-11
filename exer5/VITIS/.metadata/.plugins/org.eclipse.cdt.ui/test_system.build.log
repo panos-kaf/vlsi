@@ -1,0 +1,6 @@
+21:01:11 **** Build of configuration Emulation-SW for project test_system ****
+make all 
+Package not supported, if the system project is in Emulation Target, and only Baremetal Or Embedded Linux Applications present
+
+21:01:11 Build Finished (took 341ms)
+
