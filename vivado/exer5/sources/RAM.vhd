@@ -13,7 +13,9 @@ entity RAM is
           addr : in std_logic_vector(2 downto 0);			-- memory address
           di   : in std_logic_vector(data_width-1 downto 0);		-- input data
           do   : out std_logic_vector(data_width-1 downto 0)		-- output data
+       
           );
+          
 
 end RAM;
 
@@ -42,6 +44,8 @@ begin
             end if;
         end if;
     end process;
+    
+
 
 end behavioral;
 

@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"fir_tb_func_synth.vhd" \
-"../../../../../../exer4/exer4.srcs/sim_1/new/fir_tb.vhd" \
-
-# Do not sort compile order
-nosort

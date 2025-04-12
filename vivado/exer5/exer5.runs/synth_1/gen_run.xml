@@ -84,7 +84,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fir_fpga_fir_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fir_fpga_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fir_fpga_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fir_fpga_fir_0_0"/>
 </GenRun>

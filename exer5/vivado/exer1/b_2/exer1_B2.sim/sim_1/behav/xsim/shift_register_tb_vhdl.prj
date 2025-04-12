@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../exer1_B2.srcs/sources_1/new/rshift_reg3.vhd" \
-"../../../../exer1_B2.srcs/sim_1/new/rshift_reg3_tb.vhd" \
-
-# Do not sort compile order
-nosort

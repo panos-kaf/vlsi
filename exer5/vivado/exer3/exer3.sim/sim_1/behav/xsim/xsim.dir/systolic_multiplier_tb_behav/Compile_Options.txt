@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "systolic_multiplier_tb_behav" "xil_defaultlib.systolic_multiplier_tb" -log "elaborate.log" 

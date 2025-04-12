@@ -10,6 +10,7 @@ entity ROM is
 		   en : in  STD_LOGIC;				--- operation enable
            addr : in  STD_LOGIC_VECTOR (2 downto 0);			-- memory address
            rom_out : out  STD_LOGIC_VECTOR (coeff_width-1 downto 0)	-- output data
+           
            );
 end ROM;
 
@@ -31,7 +32,9 @@ begin
                 rom_out <= rdata;
             end if;
         end if;
-    end process;			
+    end process;
+    
+   
 
 end behavioral;
 
