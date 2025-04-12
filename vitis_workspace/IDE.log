@@ -33,3 +33,20 @@
 16:46:41 INFO  : Registering command handlers for Vitis TCF services
 16:46:45 INFO  : Checking for BSP changes to sync application flags for project 'test'...
 16:47:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:12:16 DEBUG : Logs will be stored at '/home/user/vlsi/vitis_workspace/IDE.log'.
+14:12:18 INFO  : Launching XSCT server: xsct -n  -interactive /home/user/vlsi/vitis_workspace/temp_xsdb_launch_script.tcl
+14:12:24 INFO  : XSCT server has started successfully.
+14:12:24 INFO  : plnx-install-location is set to ''
+14:12:24 INFO  : Successfully done setting XSCT server connection channel  
+14:12:24 INFO  : Successfully done setting workspace for the tool. 
+14:12:26 INFO  : Successfully done query RDI_DATADIR 
+14:12:27 INFO  : Registering command handlers for Vitis TCF services
+14:12:27 INFO  : Platform repository initialization has completed.
+14:13:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:17 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+14:44:28 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/user/vlsi/vitis_workspace/fir_fpga_wrapper2/export/fir_fpga_wrapper2/hw/fir_fpga_wrapper2.xsa is already opened
+
+14:49:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:40 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+14:50:48 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/user/vlsi/vitis_workspace/fir_fpga_wrapper2/export/fir_fpga_wrapper2/hw/fir_fpga_wrapper2.xsa is already opened
+

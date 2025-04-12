@@ -12,9 +12,7 @@ component FIR is
          clk, rst, valid_in: in std_logic;
          x: in std_logic_vector (7 downto 0);
          y: inout std_logic_vector (18 downto 0);
-         valid_out: out std_logic;
-         sleep_debug: out std_logic;
-         valid_prev: out std_logic
+         valid_out: out std_logic
          );
 end component;
 
@@ -24,12 +22,10 @@ signal valid_in: std_logic;
 signal x: std_logic_vector (7 downto 0);
 signal y: std_logic_vector (18 downto 0) := (others => '0');
 signal valid_out: std_logic;
-signal sleep_debug: std_logic;
-signal valid_prev: std_logic;
 
 begin
 
-DUT: FIR port map(clk, rst, valid_in, x, y, valid_out, sleep_debug, valid_prev);
+DUT: FIR port map(clk, rst, valid_in, x, y, valid_out);
 
 GEN_CLK: process
 begin

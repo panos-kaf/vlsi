@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1744029108" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/fir_fpga_wrapper.dcp">
-  <File Type="RDS-DCP" Name="fir_fpga_wrapper.dcp"/>
   <File Type="PA-TCL" Name="fir_fpga_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="fir_fpga_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="fir_fpga_wrapper.vds"/>
+  <File Type="RDS-DCP" Name="fir_fpga_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/fir_fpga/fir_fpga.bd">

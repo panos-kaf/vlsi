@@ -14,3 +14,10 @@ timestamp=[2025-04-07 16:46:37], mode=WORKBENCH_START, duration=0:00:17.480, dur
 timestamp=[2025-04-07 16:46:40], mode=WORKBENCH_UI_INIT, duration=0:00:03.057, duration_ms=3057, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,fir_fpga_wrapper2,test,test_system}
 timestamp=[2025-04-07 16:46:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.348, duration_ms=2348, data={}
 timestamp=[2025-04-07 16:46:49], mode=BUILD, duration=0:00:00.718, duration_ms=718, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 14:12:23], mode=WORKBENCH_START, duration=0:00:16.084, duration_ms=16084, data={}
+timestamp=[2025-04-08 14:12:27], mode=WORKBENCH_UI_INIT, duration=0:00:03.564, duration_ms=3564, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,fir_fpga_wrapper2,test,test_system}
+timestamp=[2025-04-08 14:12:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.132, duration_ms=2132, data={}
+timestamp=[2025-04-08 14:44:21], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 14:44:44], mode=BUILD, duration=0:00:21.040, duration_ms=21040, data={name=test_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-04-08 14:50:41], mode=BUILD, duration=0:00:00.613, duration_ms=613, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2025-04-08 14:51:05], mode=BUILD, duration=0:00:22.343, duration_ms=22343, data={name=test_system, configuration=Hardware, clean_build=false}

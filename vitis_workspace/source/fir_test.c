@@ -46,8 +46,8 @@ int main()
     init_platform();
     int N = 4;
 
-    int input[] = {252,240,300,400};
-    int output[N];
+    unsigned input[] = {252,240,300,400};
+    unsigned output[N];
 
     for (int i = 0; i < N; i++){
     	input[i]+= 1 << VALID_IN;
@@ -61,7 +61,7 @@ int main()
     }
 
     for (int i = 0; i < N; i++)
-    	xil_printf("%d\n",output[i] - (1 << VALID_OUT));
+    	xil_printf("%u\n",output[i] - (1 << VALID_OUT));
 
     cleanup_platform();
     return 0;

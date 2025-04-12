@@ -1,0 +1,7 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/vivado/exer5/exer5.sim/sim_1/synth/func/xsim/fir_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 's00_couplers_imp_1PJPA4G'
+INFO: [VRFC 10-3107] analyzing entity 'fir_fpga_ps7_0_axi_periph_0'
+INFO: [VRFC 10-3107] analyzing entity 'fir_fpga'
+INFO: [VRFC 10-3107] analyzing entity 'fir_fpga_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/user/vlsi/vivado/exer4/exer4.srcs/sim_1/new/fir_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_tb'
