@@ -1,0 +1,89 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../exer6.gen/sources_1/bd/digital2parallel",
+      "name": "digital2parallel",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "fifo_generator_0": "",
+      "fifo_generator_1": "",
+      "fifo_generator_2": ""
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "digital2parallel_fifo_generator_0_0",
+        "xci_path": "ip/digital2parallel_fifo_generator_0_0/digital2parallel_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Almost_Full_Flag": {
+            "value": "false"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "32"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          }
+        }
+      },
+      "fifo_generator_1": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "digital2parallel_fifo_generator_0_1",
+        "xci_path": "ip/digital2parallel_fifo_generator_0_1/digital2parallel_fifo_generator_0_1.xci",
+        "inst_hier_path": "fifo_generator_1",
+        "parameters": {
+          "Almost_Full_Flag": {
+            "value": "false"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "32"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          }
+        }
+      },
+      "fifo_generator_2": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "digital2parallel_fifo_generator_1_0",
+        "xci_path": "ip/digital2parallel_fifo_generator_1_0/digital2parallel_fifo_generator_1_0.xci",
+        "inst_hier_path": "fifo_generator_2",
+        "parameters": {
+          "Almost_Full_Flag": {
+            "value": "false"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "32"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          }
+        }
+      }
+    }
+  }
+}
