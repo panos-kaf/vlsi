@@ -1,11 +1,13 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+
 entity serial2parallel is
     port(
          CLK, RST, WR_EN, RD_EN : in std_logic; 
          pixel : in std_logic_vector (7 downto 0);
-         R,G,B : out std_logic_vector (7 downto 0)
+         R,G,B : out std_logic_vector (7 downto 0);
+         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0)
     );
 end serial2parallel;
 
@@ -132,5 +134,15 @@ dff_22: shift_register port map(
                                      D => pixels(2,1),
                                      Q => pixels(2,2)
 );
+
+pixel1 <= pixels(0,0);
+pixel2 <= pixels(0,1);
+pixel3 <= pixels(0,2);
+pixel4 <= pixels(1,0);
+pixel5 <= pixels(1,1);
+pixel6 <= pixels(1,2);
+pixel7 <= pixels(2,0);
+pixel8 <= pixels(2,1);
+pixel9 <= pixels(2,2);
 
 end Behavioral;
