@@ -3,6 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity serial2parallel is
+    generic( 
+            N : INTEGER := 8
+            );
     port(
          CLK, RST, WR_EN, RD_EN : in std_logic; 
          pixel : in std_logic_vector (7 downto 0);
@@ -38,13 +41,40 @@ component shift_register
         );
 end component;
 
+component singlebit_shift_register is
+    generic(
+        Depth : integer := N
+            );
+    port(
+        CLK, RST: in std_logic;
+        D: in std_logic;
+        Q : out std_logic
+        );
+end component;
+
 signal fifo1_out, fifo2_out, fifo3_out: std_logic_vector (7 downto 0);
 signal empty1, empty2, empty3, full1, full2, full3: std_logic;
+
+signal wren2, wren3, rden2, rden3: std_logic;
 
 type array_3x3 is array (2 downto 0, 2 downto 0) of std_logic_vector (7 downto 0);
 signal pixels : array_3x3;
 
 begin
+
+write_shift_reg2: singlebit_shift_register generic map(Depth => N)
+                                      port map(CLK => CLK, RST => RST, D => wr_en,Q => wren2);
+                                      
+read_shift_reg2: singlebit_shift_register generic map(Depth => N)
+                                      port map(CLK => CLK, RST => RST, D => rd_en,Q => rden2);                                      
+
+write_shift_reg3: singlebit_shift_register generic map(Depth => N)
+                                      port map(CLK => CLK, RST => RST, D => wren2,Q => wren3);
+                                      
+read_shift_reg3: singlebit_shift_register generic map(Depth => N)
+                                      port map(CLK => CLK, RST => RST, D => rden2,Q => rden3);                                      
+
+
 fifo1: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
@@ -79,8 +109,8 @@ fifo2: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
                                  din => fifo1_out,
-                                 wr_en => WR_EN,
-                                 rd_en => RD_EN,
+                                 wr_en => wren2,
+                                 rd_en => rden2,
                                  dout => fifo2_out,
                                  full => full2,
                                  empty => empty2
@@ -109,8 +139,8 @@ fifo3: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
                                  din => fifo2_out,
-                                 wr_en => WR_EN,
-                                 rd_en => RD_EN,
+                                 wr_en => wren3,
+                                 rd_en => rden3,
                                  dout => fifo3_out,
                                  full => full3,
                                  empty => empty3

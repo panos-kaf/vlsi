@@ -12,55 +12,45 @@ entity control_unit is
          valid_in, new_image: in std_logic;
          valid_out, image_finished: out std_logic;
          full, empty: in std_logic;
-         rd_en1, rd_en2, rd_en3, wr_en1, wr_en2, wr_en3: out std_logic
-    );
+         rd_en, wr_en, compute_enable: out std_logic;
+         color_mode: out std_logic_vector(1 downto 0)
+         );
 end control_unit;
 
 architecture Behavioral of control_unit is
 
-component shift_register is
-    generic(
-        Depth : integer := N;
-        Data_Width: integer := 8
-            );
-    port(
-        CLK, RST: in std_logic;
-        D: in std_logic_vector( Data_Width-1 downto 0);
-        Q : out std_logic_vector( Data_Width-1 downto 0)
-        );
-end component;
-
 type state is (IDLE, WRITING, READ_WRITE, FINISHED);
 signal current_state, next_state: state;
+
+signal line_counter, column_counter: std_logic := '0';
 
 signal counter: INTEGER := 0;
 constant MAX: INTEGER := N*N;
 
 begin
 
---shift_reg_1: shift_register generic map(Depth => N, Data_Width => 1)
---                            port map(CLK => CLK, RST => RST, D => wr_en1,Q => wr_en2);
+color_mode(0) <= line_counter; --  COLUMN_BIT LINE_BIT   
+color_mode(1) <= column_counter;
 
 process(CLK, RST)
 begin
 
     if RST = '1' then
         current_state <= IDLE;
+        compute_enable <= '0';
     elsif rising_edge(CLK) then
         current_state <= next_state;
         if valid_in = '1' then
             counter <= counter + 1;
+            column_counter <= not column_counter;
+            if ((counter mod N) = 0) then
+                line_counter <= not line_counter;
+            end if;
+            if (counter = (N + 2)) then
+                compute_enable <= '1';
+            end if;
         end if;
     end if;
-    
-end process;
-
-process(CLK)
-begin
-    if rising_edge(CLK) and valid_in = '1' then
-        counter <= counter + 1;
-    end if;
-
     
 end process;
 
@@ -80,6 +70,8 @@ begin
     when WRITING =>
         wr_en <= '1';
         rd_en <= '0';
+        valid_out <= '0';
+        image_finished <= '0';
         if full = '0' then
             next_state <= WRITING;
         else
@@ -90,6 +82,7 @@ begin
         valid_out <= '1';
         wr_en <= '1';
         rd_en <= '1';
+        image_finished <= '0';
         if empty = '1' then
             next_state <= WRITING;
         elsif counter = MAX then
@@ -98,8 +91,13 @@ begin
     
     when FINISHED =>
         image_finished <= '1';
+        rd_en <= '0';
+        wr_en <= '0';
+        valid_out <= '0';
         next_state <= IDLE;
     
+    when others =>
+        next_state <= IDLE;
     end case;
 
 end process;
