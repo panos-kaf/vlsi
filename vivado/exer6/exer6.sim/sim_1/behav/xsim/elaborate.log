@@ -1,23 +1,8 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: /home/user/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot serial2parallel_tb_behav xil_defaultlib.serial2parallel_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot debayering_tb_behav xil_defaultlib.debayering_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_bhv_ver_s...
-Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_CONV_VER(...
-Compiling module fifo_generator_v13_2_7.fifo_generator_vlog_beh(C_COMMON...
-Compiling module xil_defaultlib.fifo_generator_0
-Compiling architecture behavioral of entity xil_defaultlib.shift_register [\shift_register(depth=1)\]
-Compiling architecture behavioral of entity xil_defaultlib.serial2parallel [serial2parallel_default]
-Compiling architecture testbench of entity xil_defaultlib.serial2parallel_tb
-Built simulation snapshot serial2parallel_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

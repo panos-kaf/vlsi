@@ -10,19 +10,19 @@ component serial2parallel
     port(
          CLK, RST, WR_EN, RD_EN : in std_logic; 
          pixel : in std_logic_vector (7 downto 0);
-         R,G,B : out std_logic_vector (7 downto 0);
-         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0)
+         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0);
+         full, empty : out std_logic
 
     );
 end component;
 
 signal CLK, RST, WR_EN, RD_EN: std_logic;
-signal pixel, R, G, B: std_logic_vector (7 downto 0);
+signal pixel: std_logic_vector (7 downto 0);
 signal pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: std_logic_vector (7 downto 0) := "00000000";
-
+signal full,empty: std_logic;
 begin
 
-DUT: serial2parallel port map(CLK, RST, WR_EN, RD_EN, pixel, R, G, B, pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9);
+DUT: serial2parallel port map(CLK, RST, WR_EN, RD_EN, pixel,pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9,full,empty);
 
 GEN_CLK: process
 begin
@@ -39,31 +39,16 @@ begin
     
     RST <= '0';
     WR_EN <= '1';
-    RD_EN <= '1';
+    RD_EN <= '0';
     
     pixel <= "00000001";
-    wait for 20 ns;
-    pixel <= "00000010";
-    wait for 20 ns;
-    RD_EN <= '0';
-    pixel <= "00000011";
-    wait for 20 ns;
-    pixel <= "00000100";
-    wait for 20 ns;
-    pixel <= "00000101";
-    wait for 20 ns;
-    pixel <= "00000110";
-    wait for 20 ns;
+    wait for 25000 ns;
     RD_EN <= '1';
-    pixel <= "00000111";
-    wait for 20 ns;
-    pixel <= "00001000";
-    wait for 20 ns;
-    pixel <= "00001001";
-    wait for 20 ns;
-    pixel <= "00001010";
-    wait for 20 ns;
     
+    --pixel <= "00000010";
+    wait for 200ns;
+    RD_EN <= '0';
+
 end process;
 
 end testbench;

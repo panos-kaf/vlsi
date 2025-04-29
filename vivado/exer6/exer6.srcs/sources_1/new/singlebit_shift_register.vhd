@@ -25,7 +25,7 @@ begin
     if RST = '1'then
         shift_reg <= (others => '0');
     elsif rising_edge(CLK) then
-        shift_reg(1 to Depth-1) <= shift_reg(0 to Depth-2);
+        shift_reg(Depth-1 downto 1) <= shift_reg(Depth-2 downto 0);
         shift_reg(0) <= D;
     end if; 
     

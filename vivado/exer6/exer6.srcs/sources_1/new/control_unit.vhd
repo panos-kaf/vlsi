@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity control_unit is
     generic(
-             N: INTEGER := 8  
+             N: INTEGER := 32  
     );
     
     port(
@@ -38,6 +38,9 @@ begin
     if RST = '1' then
         current_state <= IDLE;
         compute_enable <= '0';
+        counter <= 0;
+        column_counter <= '1';
+        line_counter <= '1';
     elsif rising_edge(CLK) then
         current_state <= next_state;
         if valid_in = '1' then
@@ -46,7 +49,7 @@ begin
             if ((counter mod N) = 0) then
                 line_counter <= not line_counter;
             end if;
-            if (counter = (N + 2)) then
+            if counter = (2*N + 2) then
                 compute_enable <= '1';
             end if;
         end if;
@@ -54,13 +57,13 @@ begin
     
 end process;
 
-process(current_state, new_image)
+process(CLK,current_state, new_image)
 begin   
     case current_state is
     when IDLE =>
         valid_out <= '0';
         image_finished <= '0';
-        counter <= 0;
+       -- counter <= 0;
         rd_en <= '0';
         wr_en <= '0';
         if new_image = '1' then
@@ -74,7 +77,7 @@ begin
         image_finished <= '0';
         if full = '0' then
             next_state <= WRITING;
-        else
+        elsif full = '1' then
             next_state <= READ_WRITE;
         end if;
         

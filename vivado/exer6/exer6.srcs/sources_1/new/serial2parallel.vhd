@@ -4,13 +4,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity serial2parallel is
     generic( 
-            N : INTEGER := 8
+            N : INTEGER := 32
             );
     port(
          CLK, RST, WR_EN, RD_EN : in std_logic; 
          pixel : in std_logic_vector (7 downto 0);
-         R,G,B : out std_logic_vector (7 downto 0);
-         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0)
+         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0);
+         full, empty: out std_logic
     );
 end serial2parallel;
 
@@ -61,6 +61,9 @@ type array_3x3 is array (2 downto 0, 2 downto 0) of std_logic_vector (7 downto 0
 signal pixels : array_3x3;
 
 begin
+
+full <= full1;
+empty <= empty1;
 
 write_shift_reg2: singlebit_shift_register generic map(Depth => N)
                                       port map(CLK => CLK, RST => RST, D => wr_en,Q => wren2);

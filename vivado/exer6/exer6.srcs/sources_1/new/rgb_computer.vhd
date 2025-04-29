@@ -47,6 +47,12 @@ begin
                     temp_G := resize(unsigned(pixel5), 9);
                     temp_B := (resize(unsigned(pixel2), 9) + resize(unsigned(pixel8), 9)) / 2;
                     
+                when others =>
+                    R <= "00000000";
+                    G <= "00000000";
+                    B<= "00000000";
+              
+                    
             end case;
 
             R <= std_logic_vector(temp_R(7 downto 0));
