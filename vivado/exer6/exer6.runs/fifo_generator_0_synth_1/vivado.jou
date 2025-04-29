@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Apr 22 15:04:08 2025
-# Process ID: 2404
+# Start of session at: Tue Apr 29 20:35:26 2025
+# Process ID: 26591
 # Current directory: /home/user/vlsi/vivado/exer6/exer6.runs/fifo_generator_0_synth_1
 # Command line: vivado -log fifo_generator_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_0.tcl
 # Log file: /home/user/vlsi/vivado/exer6/exer6.runs/fifo_generator_0_synth_1/fifo_generator_0.vds
 # Journal file: /home/user/vlsi/vivado/exer6/exer6.runs/fifo_generator_0_synth_1/vivado.jou
-# Running On: d1fdddbf256a, OS: Linux, CPU Frequency: , CPU Physical cores: 1, Host memory: 8322 MB
+# Running On: b4f0e5d6d221, OS: Linux, CPU Frequency: , CPU Physical cores: 1, Host memory: 8322 MB
 #-----------------------------------------------------------
 source fifo_generator_0.tcl -notrace

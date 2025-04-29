@@ -1,4 +1,5 @@
 
+
 def calculate_pixel(mode, pixels):
     RGB = {}
     if mode == 0:
@@ -27,7 +28,6 @@ def get_pixel(pixels, i, j):
 
 def main():
     # Create 32x32 image
-    #pixels = [[4 for j in range(32)] for i in range(32)]
     
 
     def read_pixels(filename):
@@ -40,11 +40,14 @@ def main():
         values = [int(line.strip()) for line in lines]
         pixels = [values[i*32:(i+1)*32] for i in range(32)]
         return pixels
-
-    pixels = read_pixels('test_input')
+    
+    pixels = read_pixels('test2')
+#pixels = [[4 for j in range(32)] for i in range(32)]
+    k=0
 
     for i in range(32):
         for j in range(32):
+            k = k + 1 
             # Extract 3x3 window with zero-padding
             window = [
                 get_pixel(pixels, i-1, j-1), get_pixel(pixels, i-1, j), get_pixel(pixels, i-1, j+1),
@@ -53,7 +56,7 @@ def main():
             ]
             mode = (i % 2) * 2 + (j % 2)
             RGB = calculate_pixel(mode, window)
-            print('R={}, G={}, B={}'.format(RGB["R"], RGB["G"], RGB["B"]))
+            print(k,': R={}, G={}, B={}'.format(RGB["R"], RGB["G"], RGB["B"]))
             #print('\033[31mRed = {}\033[0m, \033[32mGreen = {}\033[0m, \033[34mBlue = {}\033[0m'.format(RGB["R"], RGB["G"], RGB["B"]))
 
 if __name__ == "__main__":

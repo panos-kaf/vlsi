@@ -13,7 +13,11 @@ entity control_unit is
          valid_out, image_finished: out std_logic;
          full, empty: in std_logic;
          rd_en, wr_en, compute_enable: out std_logic;
-         color_mode: out std_logic_vector(1 downto 0)
+         color_mode: out std_logic_vector(1 downto 0);
+         counter_debug: out INTEGER;
+         almost_full: in std_logic;
+         prog_full: in std_logic;
+         line_start, line_end: out std_logic
          );
 end control_unit;
 
@@ -32,6 +36,8 @@ begin
 color_mode(0) <= line_counter; --  COLUMN_BIT LINE_BIT   
 color_mode(1) <= column_counter;
 
+counter_debug <= counter;
+
 process(CLK, RST)
 begin
 
@@ -46,10 +52,21 @@ begin
         if valid_in = '1' then
             counter <= counter + 1;
             column_counter <= not column_counter;
-            if ((counter mod N) = 0) then
-                line_counter <= not line_counter;
+            --if (counter mod N) = (N-1) then
+            --    line_end <= '1';
+            --else line_end <= '0';
+            --end if;
+            if (counter mod N) = 1 then
+                line_start <= '1';
+            else line_start <= '0';
             end if;
-            if counter = (2*N + 2) then
+            
+            if ((counter mod N) = 0) then
+                line_end <= '1';
+                line_counter <= not line_counter;
+            else line_end <= '0';
+            end if;
+            if counter = (2*N + 2 ) then
                 compute_enable <= '1';
             end if;
         end if;
@@ -75,9 +92,9 @@ begin
         rd_en <= '0';
         valid_out <= '0';
         image_finished <= '0';
-        if full = '0' then
+        if prog_full = '0' then
             next_state <= WRITING;
-        elsif full = '1' then
+        elsif prog_full = '1' then
             next_state <= READ_WRITE;
         end if;
         
