@@ -41,7 +41,7 @@ def main():
         pixels = [values[i*32:(i+1)*32] for i in range(32)]
         return pixels
     
-    pixels = read_pixels('test2')
+    pixels = read_pixels('test_input')
 #pixels = [[4 for j in range(32)] for i in range(32)]
     k=0
 

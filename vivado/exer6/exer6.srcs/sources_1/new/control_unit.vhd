@@ -27,6 +27,7 @@ type state is (IDLE, WRITING, READ_WRITE, FINISHED);
 signal current_state, next_state: state;
 
 signal line_counter, column_counter: std_logic := '0';
+signal start_mode: std_logic := '0';
 
 signal counter: INTEGER := 0;
 constant MAX: INTEGER := N*N;
@@ -45,30 +46,34 @@ begin
         current_state <= IDLE;
         compute_enable <= '0';
         counter <= 0;
-        column_counter <= '1';
-        line_counter <= '1';
+        column_counter <= '0';
+        line_counter <= '0';
     elsif rising_edge(CLK) then
         current_state <= next_state;
-        if valid_in = '1' then
-            counter <= counter + 1;
+        
+        if start_mode = '1' then
+        
             column_counter <= not column_counter;
-            --if (counter mod N) = (N-1) then
-            --    line_end <= '1';
-            --else line_end <= '0';
-            --end if;
-            if (counter mod N) = 1 then
-                line_start <= '1';
-            else line_start <= '0';
+            
+            if ((counter mod N) = 1) then line_counter <= not line_counter; column_counter <= '0'; end if;
+            
+            if ((counter mod N) = 2) then line_start <= '1'; 
+            else line_start <= '0'; 
             end if;
             
-            if ((counter mod N) = 0) then
-                line_end <= '1';
-                line_counter <= not line_counter;
-            else line_end <= '0';
+            if ((counter mod N) = 1) then line_end <= '1';
+            else line_end <= '0'; 
             end if;
-            if counter = (2*N + 2 ) then
-                compute_enable <= '1';
-            end if;
+                
+        end if;
+        
+        if valid_in = '1' then
+            counter <= counter + 1;
+        end if;
+            
+        if counter = (2*N + 2 ) then
+            start_mode <= '1';
+            compute_enable <= '1';
         end if;
     end if;
     
