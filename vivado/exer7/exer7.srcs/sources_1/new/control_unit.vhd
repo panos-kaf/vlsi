@@ -76,7 +76,7 @@ begin
     
 end process;
 
-process(CLK,current_state, new_image)
+process(CLK,current_state)
 begin   
     case current_state is
     when IDLE =>

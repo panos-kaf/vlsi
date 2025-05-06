@@ -12,8 +12,8 @@
 #define RX_DMA_ID                 XPAR_PL2PS_DMA_DEVICE_ID
 #define RX_DMA_S2MM_LENGTH_ADDR  (XPAR_PL2PS_DMA_BASEADDR + 0x58) // Reports actual number of bytes transferred from PL->PS (use Xil_In32 for report)
 
-#define TX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x20000000) // 0 + 512MByte
-#define RX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x30000000) // 0 + 768MByte
+#define TX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x08000000) // 0 + 128MByte
+#define RX_BUFFER (XPAR_DDR_MEM_BASEADDR + 0x10000000) // 0 + 256MByte
 
 /* User application global variables & defines */
 
@@ -32,17 +32,22 @@ int main()
 	init_platform();
 
     // Step 1: Initialize TX-DMA Device (PS->PL)
+
     // Step 2: Initialize RX-DMA Device (PL->PS)
 
     XTime_GetTime(&preExecCyclesFPGA);
+
     // Step 3 : Perform FPGA processing
     //      3a: Setup RX-DMA transaction
     //      3b: Setup TX-DMA transaction
     //      3c: Wait for TX-DMA & RX-DMA to finish
+
     XTime_GetTime(&postExecCyclesFPGA);
 
     XTime_GetTime(&preExecCyclesSW);
+
     // Step 5: Perform SW processing
+	
     XTime_GetTime(&postExecCyclesSW);
 
     // Step 6: Compare FPGA and SW results

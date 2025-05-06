@@ -105,6 +105,8 @@ end component;
   signal valid_out_sig: std_logic;
   signal rgb_data_sig: std_logic_vector (31 downto 0) := (others => '0');
   signal pixel_sig: std_logic_vector (7 downto 0);
+  signal r_sig, g_sig, b_sig: std_logic_vector(7 downto 0);
+  signal debayering_reset : std_logic;
 
 begin
 
@@ -140,7 +142,7 @@ begin
               M_AXIS_TO_ACCELERATOR_tdata         =>     pixel_sig,
               M_AXIS_TO_ACCELERATOR_tkeep         =>    tmp_tkeep,   --always 1?
               M_AXIS_TO_ACCELERATOR_tlast           =>      tmp_tlast,       --???
-              M_AXIS_TO_ACCELERATOR_tready        =>     tmp_tready,       --???
+              M_AXIS_TO_ACCELERATOR_tready        =>     '1',       --???
               M_AXIS_TO_ACCELERATOR_tvalid          =>    valid_in_sig,
               ------------------------------------------------------------------------------------
               -- ACCELERATOR AXI4-STREAM MASTER INTERFACE TO PL2P2-DMA AXI4-STREAM SLAVE INTERFACE
@@ -151,22 +153,26 @@ begin
               S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => valid_out_sig
              );
 
-              tmp_tkeep <= "1";
+--              tmp_tkeep <= "1";
+--              tmp_tready <= '1';
+              rgb_data_sig <= "00000000" & R_sig & G_sig & B_sig;
+              new_image_sig <= '1';
+              debayering_reset <= not ARESETN(0);
 ----------------------------
 -- COMPONENTS INSTANTIATIONS
 
 debayering: debayering_filter generic map( N => 32)
                                                     port map(
                                                                      CLK => ACLK,
-                                                                     RST => ARESETN(0),
+                                                                     RST => debayering_reset,
                                                                      valid_in => valid_in_sig,
                                                                      new_image => new_image_sig,
                                                                      valid_out => valid_out_sig,
                                                                      image_finished => image_finished_sig,
                                                                      pixel => pixel_sig,
-                                                                     R => rgb_data_sig (23 downto 16),
-                                                                     G => rgb_data_sig (15 downto 8),
-                                                                     B => rgb_data_sig (7 downto 0)
+                                                                     R => R_sig,
+                                                                     G => G_sig,
+                                                                     B => B_sig
                                                     );
 
 end architecture; -- arch
