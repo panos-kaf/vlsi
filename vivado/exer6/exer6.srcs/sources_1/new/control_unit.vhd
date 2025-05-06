@@ -23,14 +23,15 @@ end control_unit;
 
 architecture Behavioral of control_unit is
 
-type state is (IDLE, WRITING, READ_WRITE, FINISHED);
+type state is (IDLE, WRITING, READ_WRITE, LAST_PIXELS, FINISHED);
 signal current_state, next_state: state;
 
 signal line_counter, column_counter: std_logic := '0';
 signal start_mode: std_logic := '0';
 
 signal counter: INTEGER := 0;
-constant MAX: INTEGER := N*N;
+constant ALMOST_MAX: INTEGER := N*N;
+constant MAX: INTEGER := N*N + 2*N + 2;
 
 begin
 
@@ -55,7 +56,7 @@ begin
         
             column_counter <= not column_counter;
             
-            if ((counter mod N) = 1) then line_counter <= not line_counter; column_counter <= '0'; end if;
+            if ((counter mod N) = 2) then line_counter <= not line_counter; column_counter <= '0'; end if;
             
             if ((counter mod N) = 2) then line_start <= '1'; 
             else line_start <= '0'; 
@@ -110,7 +111,16 @@ begin
         image_finished <= '0';
         if empty = '1' then
             next_state <= WRITING;
-        elsif counter = MAX then
+        elsif counter = ALMOST_MAX then
+            next_state <= LAST_PIXELS;
+        end if;
+    
+    when LAST_PIXELS =>
+        wr_en <= '0';
+        rd_en <= '1';
+        image_finished <= '0';
+        valid_out <= '1';
+        if counter = MAX then
             next_state <= FINISHED;
         end if;
     
