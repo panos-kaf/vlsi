@@ -1,7 +1,7 @@
 --Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
---Date        : Tue May  6 12:25:43 2025
+--Date        : Tue May  6 19:43:20 2025
 --Host        : archlinux running 64-bit unknown
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1100,10 +1100,10 @@ entity design_1 is
     S_AXIS_S2MM_FROM_ACCELERATOR_tready : out STD_LOGIC;
     S_AXIS_S2MM_FROM_ACCELERATOR_tvalid : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
@@ -1673,47 +1673,47 @@ architecture STRUCTURE of design_1 is
   signal NLW_PS_ARM_S_AXI_HP1_WACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_PS_ARM_S_AXI_HP1_WCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_PS_ARM_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of ACLK : signal is "xilinx.com:signal:clock:1.0 CLK.ACLK CLK";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of ACLK : signal is "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF M_AXIS_TO_ACCELERATOR:S_AXIS_S2MM_FROM_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
-  attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
-  attribute X_INTERFACE_INFO of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
-  attribute X_INTERFACE_INFO of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
-  attribute X_INTERFACE_INFO of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
-  attribute X_INTERFACE_INFO of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
-  attribute X_INTERFACE_INFO of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
-  attribute X_INTERFACE_INFO of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
-  attribute X_INTERFACE_INFO of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
-  attribute X_INTERFACE_PARAMETER of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of M_AXIS_TO_ACCELERATOR_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TLAST";
-  attribute X_INTERFACE_INFO of M_AXIS_TO_ACCELERATOR_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TREADY";
-  attribute X_INTERFACE_INFO of M_AXIS_TO_ACCELERATOR_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TVALID";
-  attribute X_INTERFACE_INFO of S_AXIS_S2MM_FROM_ACCELERATOR_tlast : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TLAST";
-  attribute X_INTERFACE_INFO of S_AXIS_S2MM_FROM_ACCELERATOR_tready : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TREADY";
-  attribute X_INTERFACE_INFO of S_AXIS_S2MM_FROM_ACCELERATOR_tvalid : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TVALID";
-  attribute X_INTERFACE_INFO of ARESETN : signal is "xilinx.com:signal:reset:1.0 RST.ARESETN RST";
-  attribute X_INTERFACE_PARAMETER of ARESETN : signal is "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
-  attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
-  attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
-  attribute X_INTERFACE_INFO of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
-  attribute X_INTERFACE_INFO of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
-  attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
-  attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
-  attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
-  attribute X_INTERFACE_INFO of M_AXIS_TO_ACCELERATOR_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TDATA";
-  attribute X_INTERFACE_PARAMETER of M_AXIS_TO_ACCELERATOR_tdata : signal is "XIL_INTERFACENAME M_AXIS_TO_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
-  attribute X_INTERFACE_INFO of M_AXIS_TO_ACCELERATOR_tkeep : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TKEEP";
-  attribute X_INTERFACE_INFO of S_AXIS_S2MM_FROM_ACCELERATOR_tdata : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TDATA";
-  attribute X_INTERFACE_PARAMETER of S_AXIS_S2MM_FROM_ACCELERATOR_tdata : signal is "XIL_INTERFACENAME S_AXIS_S2MM_FROM_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
-  attribute X_INTERFACE_INFO of S_AXIS_S2MM_FROM_ACCELERATOR_tkeep : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TKEEP";
+  attribute x_interface_info : string;
+  attribute x_interface_info of ACLK : signal is "xilinx.com:signal:clock:1.0 CLK.ACLK CLK";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of ACLK : signal is "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF M_AXIS_TO_ACCELERATOR:S_AXIS_S2MM_FROM_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
+  attribute x_interface_info of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
+  attribute x_interface_info of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
+  attribute x_interface_info of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
+  attribute x_interface_info of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
+  attribute x_interface_info of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
+  attribute x_interface_info of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
+  attribute x_interface_info of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
+  attribute x_interface_info of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
+  attribute x_interface_info of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
+  attribute x_interface_parameter of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
+  attribute x_interface_info of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
+  attribute x_interface_info of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
+  attribute x_interface_info of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
+  attribute x_interface_info of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute x_interface_info of M_AXIS_TO_ACCELERATOR_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TLAST";
+  attribute x_interface_info of M_AXIS_TO_ACCELERATOR_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TREADY";
+  attribute x_interface_info of M_AXIS_TO_ACCELERATOR_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TVALID";
+  attribute x_interface_info of S_AXIS_S2MM_FROM_ACCELERATOR_tlast : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TLAST";
+  attribute x_interface_info of S_AXIS_S2MM_FROM_ACCELERATOR_tready : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TREADY";
+  attribute x_interface_info of S_AXIS_S2MM_FROM_ACCELERATOR_tvalid : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TVALID";
+  attribute x_interface_info of ARESETN : signal is "xilinx.com:signal:reset:1.0 RST.ARESETN RST";
+  attribute x_interface_parameter of ARESETN : signal is "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute x_interface_info of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
+  attribute x_interface_parameter of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
+  attribute x_interface_info of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
+  attribute x_interface_info of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
+  attribute x_interface_info of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
+  attribute x_interface_info of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
+  attribute x_interface_info of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
+  attribute x_interface_info of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
+  attribute x_interface_info of M_AXIS_TO_ACCELERATOR_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TDATA";
+  attribute x_interface_parameter of M_AXIS_TO_ACCELERATOR_tdata : signal is "XIL_INTERFACENAME M_AXIS_TO_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute x_interface_info of M_AXIS_TO_ACCELERATOR_tkeep : signal is "xilinx.com:interface:axis:1.0 M_AXIS_TO_ACCELERATOR TKEEP";
+  attribute x_interface_info of S_AXIS_S2MM_FROM_ACCELERATOR_tdata : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TDATA";
+  attribute x_interface_parameter of S_AXIS_S2MM_FROM_ACCELERATOR_tdata : signal is "XIL_INTERFACENAME S_AXIS_S2MM_FROM_ACCELERATOR, CLK_DOMAIN design_1_PS_ARM_0_FCLK_CLK1, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute x_interface_info of S_AXIS_S2MM_FROM_ACCELERATOR_tkeep : signal is "xilinx.com:interface:axis:1.0 S_AXIS_S2MM_FROM_ACCELERATOR TKEEP";
 begin
   ACLK <= processing_system7_0_FCLK_CLK1;
   ARESETN(0) <= rst_ps7_0_50M_peripheral_aresetn(0);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  6 12:25:44 2025" VIVADOVERSION="2022.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  6 19:43:21 2025" VIVADOVERSION="2022.2.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="bd_afc3" PACKAGE="clg400" SPEEDGRADE="-1"/>
 

@@ -24,50 +24,50 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 416952
+INFO: [Synth 8-7075] Helper process launched with PID 145705
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/panos/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1998.809 ; gain = 372.738 ; free physical = 5240 ; free virtual = 9089
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 2967.629; parent = 2001.781; children = 965.848
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1998.555 ; gain = 372.738 ; free physical = 1229 ; free virtual = 7207
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2968.383; parent = 2002.527; children = 965.855
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'dvlsi2021_lab5_top' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:31]
-INFO: [Synth 8-3491] module 'design_1_wrapper' declared at '/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd:14' bound to instance 'PROCESSING_SYSTEM_INSTANCE' of component 'design_1_wrapper' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:111]
+INFO: [Synth 8-3491] module 'design_1_wrapper' declared at '/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd:14' bound to instance 'PROCESSING_SYSTEM_INSTANCE' of component 'design_1_wrapper' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:112]
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd:52]
 INFO: [Synth 8-3491] module 'design_1' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1067' bound to instance 'design_1_i' of component 'design_1' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd:91]
 INFO: [Synth 8-638] synthesizing module 'design_1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1109]
 WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1110]
-INFO: [Synth 8-3491] module 'design_1_PL2PS_DMA_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL2PS_DMA_0_stub.vhdl:5' bound to instance 'PL2PS_DMA' of component 'design_1_PL2PS_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1730]
-INFO: [Synth 8-638] synthesizing module 'design_1_PL2PS_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL2PS_DMA_0_stub.vhdl:54]
-INFO: [Synth 8-3491] module 'design_1_PL_GEN_ARESETN_100_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL_GEN_ARESETN_100_0_stub.vhdl:5' bound to instance 'PL_GEN_ARESETN_100' of component 'design_1_PL_GEN_ARESETN_100_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1775]
-INFO: [Synth 8-638] synthesizing module 'design_1_PL_GEN_ARESETN_100_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL_GEN_ARESETN_100_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_PL_GEN_ARESETN_50_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL_GEN_ARESETN_50_0_stub.vhdl:5' bound to instance 'PL_GEN_ARESETN_50' of component 'design_1_PL_GEN_ARESETN_50_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1788]
-INFO: [Synth 8-638] synthesizing module 'design_1_PL_GEN_ARESETN_50_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PL_GEN_ARESETN_50_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_PL2PS_DMA_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL2PS_DMA_0_stub.vhdl:5' bound to instance 'PL2PS_DMA' of component 'design_1_PL2PS_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1730]
+INFO: [Synth 8-638] synthesizing module 'design_1_PL2PS_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL2PS_DMA_0_stub.vhdl:54]
+INFO: [Synth 8-3491] module 'design_1_PL_GEN_ARESETN_100_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL_GEN_ARESETN_100_0_stub.vhdl:5' bound to instance 'PL_GEN_ARESETN_100' of component 'design_1_PL_GEN_ARESETN_100_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'design_1_PL_GEN_ARESETN_100_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL_GEN_ARESETN_100_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_PL_GEN_ARESETN_50_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL_GEN_ARESETN_50_0_stub.vhdl:5' bound to instance 'PL_GEN_ARESETN_50' of component 'design_1_PL_GEN_ARESETN_50_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1788]
+INFO: [Synth 8-638] synthesizing module 'design_1_PL_GEN_ARESETN_50_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PL_GEN_ARESETN_50_0_stub.vhdl:21]
 WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1184]
-INFO: [Synth 8-3491] module 'design_1_PS2PL_DMA_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PS2PL_DMA_0_stub.vhdl:5' bound to instance 'PS2PL_DMA' of component 'design_1_PS2PL_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1801]
-INFO: [Synth 8-638] synthesizing module 'design_1_PS2PL_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PS2PL_DMA_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'design_1_PS_ARM_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PS_ARM_0_stub.vhdl:5' bound to instance 'PS_ARM' of component 'design_1_PS_ARM_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1843]
-INFO: [Synth 8-638] synthesizing module 'design_1_PS_ARM_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_PS_ARM_0_stub.vhdl:172]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:2007]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_axi_smc_0_stub.vhdl:43]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_1_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'design_1_axi_smc_1_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:2042]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_1_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_axi_smc_1_0_stub.vhdl:49]
+INFO: [Synth 8-3491] module 'design_1_PS2PL_DMA_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PS2PL_DMA_0_stub.vhdl:5' bound to instance 'PS2PL_DMA' of component 'design_1_PS2PL_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1801]
+INFO: [Synth 8-638] synthesizing module 'design_1_PS2PL_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PS2PL_DMA_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_PS_ARM_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PS_ARM_0_stub.vhdl:5' bound to instance 'PS_ARM' of component 'design_1_PS_ARM_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1843]
+INFO: [Synth 8-638] synthesizing module 'design_1_PS_ARM_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_PS_ARM_0_stub.vhdl:172]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:2007]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_axi_smc_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_1_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'design_1_axi_smc_1_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:2042]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_1_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_axi_smc_1_0_stub.vhdl:49]
 INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:605]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:55]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:55]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:151]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:151]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:272]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:455]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:455]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:272]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1003]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1003]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/design_1_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:605]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/synth/design_1.vhd:1109]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd:52]
 	Parameter N bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'debayering_filter' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/debayering.vhd:4' bound to instance 'debayering' of component 'debayering_filter' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:158]
+INFO: [Synth 8-3491] module 'debayering_filter' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/debayering.vhd:4' bound to instance 'debayering' of component 'debayering_filter' [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:162]
 INFO: [Synth 8-638] synthesizing module 'debayering_filter' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/debayering.vhd:17]
 	Parameter N bound to: 32 - type: integer 
 	Parameter N bound to: 32 - type: integer 
@@ -93,19 +93,19 @@ INFO: [Synth 8-3491] module 'singlebit_shift_register' declared at '/home/panos/
 INFO: [Synth 8-3491] module 'singlebit_shift_register' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/singlebit_shift_register.vhd:5' bound to instance 'write_shift_reg3' of component 'singlebit_shift_register' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:76]
 	Parameter Depth bound to: 32 - type: integer 
 INFO: [Synth 8-3491] module 'singlebit_shift_register' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/singlebit_shift_register.vhd:5' bound to instance 'read_shift_reg3' of component 'singlebit_shift_register' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:79]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo1' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/fifo_generator_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo1' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/fifo_generator_0_stub.vhdl:20]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_00' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:95]
 INFO: [Synth 8-638] synthesizing module 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:17]
 	Parameter Data_Width bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'dff' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:17]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_01' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:101]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_02' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:107]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo2' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:114]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo2' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:114]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_10' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:126]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_11' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:132]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_12' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:138]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-416898-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo3' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:145]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/.Xil/Vivado-145641-archlinux/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'fifo3' of component 'fifo_generator_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:145]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_20' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:157]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_21' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:163]
 INFO: [Synth 8-3491] module 'dff' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd:5' bound to instance 'dff_22' of component 'dff' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd:169]
@@ -118,7 +118,6 @@ INFO: [Synth 8-226] default block is never used [/home/panos/dev/vlsi/vivado/exe
 INFO: [Synth 8-256] done synthesizing module 'rgb_computer' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/rgb_computer.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'debayering_filter' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/debayering.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'dvlsi2021_lab5_top' (0#1) [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:31]
-WARNING: [Synth 8-3848] Net new_image_sig in module/entity dvlsi2021_lab5_top does not have driver. [/home/panos/dev/vlsi/vivado/helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd:102]
 WARNING: [Synth 8-7129] Port full in module control_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_UYSKKA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_UYSKKA is either unconnected or has no load
@@ -131,24 +130,24 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_15SPJYW is eit
 WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_15SPJYW is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_15SPJYW is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2079.746 ; gain = 453.676 ; free physical = 5245 ; free virtual = 9095
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3045.598; parent = 2079.750; children = 965.848
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2079.492 ; gain = 453.676 ; free physical = 1299 ; free virtual = 7278
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3045.352; parent = 2079.496; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2097.559 ; gain = 471.488 ; free physical = 5262 ; free virtual = 9112
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3063.410; parent = 2097.562; children = 965.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2097.305 ; gain = 471.488 ; free physical = 1292 ; free virtual = 7271
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3063.164; parent = 2097.309; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2097.559 ; gain = 471.488 ; free physical = 5262 ; free virtual = 9112
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3063.410; parent = 2097.562; children = 965.848
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2097.305 ; gain = 471.488 ; free physical = 1292 ; free virtual = 7271
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3063.164; parent = 2097.309; children = 965.855
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2097.559 ; gain = 0.000 ; free physical = 5254 ; free virtual = 9104
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2097.305 ; gain = 0.000 ; free physical = 1292 ; free virtual = 7271
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -181,27 +180,27 @@ Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/dont_touc
 Finished Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2255.309 ; gain = 0.000 ; free physical = 5090 ; free virtual = 8939
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2255.055 ; gain = 0.000 ; free physical = 1153 ; free virtual = 7132
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2255.309 ; gain = 0.000 ; free physical = 5097 ; free virtual = 8947
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2255.055 ; gain = 0.000 ; free physical = 1153 ; free virtual = 7132
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/panos/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5151 ; free virtual = 9001
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1270 ; free virtual = 7249
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5151 ; free virtual = 9001
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1270 ; free virtual = 7249
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -481,9 +480,9 @@ Applied set_property KEEP_HIERARCHY = SOFT for debayering/serial2parallel_instan
 Applied set_property KEEP_HIERARCHY = SOFT for debayering/serial2parallel_instance/fifo2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for debayering/serial2parallel_instance/fifo3. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5151 ; free virtual = 9001
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1266 ; free virtual = 7245
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'control_unit'
 WARNING: [Synth 8-327] inferring latch for variable 'valid_out_reg' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/control_unit.vhd:83]
@@ -503,9 +502,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_r
 WARNING: [Synth 8-327] inferring latch for variable 'image_finished_reg' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/control_unit.vhd:84]
 WARNING: [Synth 8-327] inferring latch for variable 'wr_en_reg' [/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/control_unit.vhd:87]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5152 ; free virtual = 9002
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1250 ; free virtual = 7230
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -549,33 +548,33 @@ WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_ps7_0_axi_periph_0 i
 WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5146 ; free virtual = 9001
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1523.316; parent = 1274.854; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1250 ; free virtual = 7234
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.134; parent = 1226.920; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5040 ; free virtual = 8896
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1609.709; parent = 1362.256; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1131 ; free virtual = 7116
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1534.149; parent = 1323.978; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5042 ; free virtual = 8897
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1611.025; parent = 1363.572; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1133 ; free virtual = 7117
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1537.310; parent = 1327.138; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5042 ; free virtual = 8897
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.330; parent = 1364.877; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1127 ; free virtual = 7112
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1538.731; parent = 1328.560; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -593,49 +592,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5063 ; free virtual = 8918
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.623; parent = 1365.170; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.071; parent = 1328.899; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5063 ; free virtual = 8918
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.623; parent = 1365.170; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.087; parent = 1328.915; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5065 ; free virtual = 8920
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.729; parent = 1365.275; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.192; parent = 1329.021; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5065 ; free virtual = 8920
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.729; parent = 1365.275; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.255; parent = 1329.083; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5065 ; free virtual = 8920
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.729; parent = 1365.275; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.255; parent = 1329.083; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5065 ; free virtual = 8920
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.729; parent = 1365.275; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.255; parent = 1329.083; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -691,8 +690,8 @@ Report Cell Usage:
 |13    |CARRY4                             |    35|
 |14    |LUT1                               |     1|
 |15    |LUT2                               |    56|
-|16    |LUT3                               |    34|
-|17    |LUT4                               |    28|
+|16    |LUT3                               |    35|
+|17    |LUT4                               |    27|
 |18    |LUT5                               |    18|
 |19    |LUT6                               |    69|
 |20    |SRLC32E                            |     4|
@@ -701,29 +700,29 @@ Report Cell Usage:
 |23    |LD                                 |     6|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5065 ; free virtual = 8920
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1612.744; parent = 1365.291; children = 248.463
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.145; parent = 2223.297; children = 965.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1124 ; free virtual = 7108
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1539.271; parent = 1329.099; children = 210.214
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3188.898; parent = 2223.043; children = 965.855
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2255.309 ; gain = 471.488 ; free physical = 5122 ; free virtual = 8977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.309 ; gain = 629.238 ; free physical = 5122 ; free virtual = 8977
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2255.055 ; gain = 471.488 ; free physical = 1173 ; free virtual = 7157
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2255.055 ; gain = 629.238 ; free physical = 1173 ; free virtual = 7157
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2255.309 ; gain = 0.000 ; free physical = 5230 ; free virtual = 9086
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2255.055 ; gain = 0.000 ; free physical = 1211 ; free virtual = 7196
 INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2255.309 ; gain = 0.000 ; free physical = 5226 ; free virtual = 9082
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2255.055 ; gain = 0.000 ; free physical = 1151 ; free virtual = 7135
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   LD => LDCE: 6 instances
 
-Synth Design complete, checksum: fbc4bb9d
+Synth Design complete, checksum: e276b2df
 INFO: [Common 17-83] Releasing license: Synthesis
-97 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+97 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2255.309 ; gain = 942.512 ; free physical = 5374 ; free virtual = 9229
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2255.055 ; gain = 941.605 ; free physical = 1240 ; free virtual = 7224
 INFO: [Common 17-1381] The checkpoint '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/synth_1/dvlsi2021_lab5_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file dvlsi2021_lab5_top_utilization_synth.rpt -pb dvlsi2021_lab5_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  6 12:38:58 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue May  6 19:48:00 2025...

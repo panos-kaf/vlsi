@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Tue May  6 12:39:57 2025
+| Date             : Tue May  6 19:48:59 2025
 | Host             : archlinux running 64-bit unknown
 | Command          : report_power -file dvlsi2021_lab5_top_power_routed.rpt -pb dvlsi2021_lab5_top_power_summary_routed.pb -rpx dvlsi2021_lab5_top_power_routed.rpx
 | Design           : dvlsi2021_lab5_top
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.716        |
+| Total On-Chip Power (W)  | 1.715        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.593        |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |        4 |       --- |             --- |
-| Slice Logic              |     0.004 |    10724 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     3089 |     17600 |           17.55 |
+| Clocks                   |     0.015 |        4 |       --- |             --- |
+| Slice Logic              |     0.004 |    10722 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     3088 |     17600 |           17.55 |
 |   CARRY4                 |    <0.001 |      203 |      4400 |            4.61 |
 |   LUT as Distributed RAM |    <0.001 |      226 |      6000 |            3.77 |
-|   Register               |    <0.001 |     5201 |     35200 |           14.78 |
+|   Register               |    <0.001 |     5200 |     35200 |           14.77 |
 |   LUT as Shift Register  |    <0.001 |      217 |      6000 |            3.62 |
 |   F7/F8 Muxes            |    <0.001 |       14 |     17600 |            0.08 |
-|   Others                 |     0.000 |      666 |       --- |             --- |
-| Signals                  |     0.005 |     7863 |       --- |             --- |
+|   Others                 |     0.000 |      667 |       --- |             --- |
+| Signals                  |     0.005 |     7856 |       --- |             --- |
 | Block RAM                |     0.005 |     12.5 |        60 |           20.83 |
 | PS7                      |     1.564 |        1 |       --- |             --- |
 | Static Power             |     0.122 |          |           |                 |
-| Total                    |     1.716 |          |           |                 |
+| Total                    |     1.715 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.037 |       0.030 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.037 |       0.029 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -155,12 +155,12 @@ Table of Contents
 | dvlsi2021_lab5_top           |     1.593 |
 |   PROCESSING_SYSTEM_INSTANCE |     1.589 |
 |     design_1_i               |     1.589 |
-|       PL2PS_DMA              |     0.009 |
-|       PS2PL_DMA              |     0.006 |
+|       PL2PS_DMA              |     0.008 |
+|       PS2PL_DMA              |     0.005 |
 |       PS_ARM                 |     1.564 |
 |       axi_smc                |     0.003 |
 |       axi_smc_1              |     0.005 |
-|       ps7_0_axi_periph       |     0.003 |
+|       ps7_0_axi_periph       |     0.002 |
 |   debayering                 |     0.004 |
 |     serial2parallel_instance |     0.004 |
 +------------------------------+-----------+
