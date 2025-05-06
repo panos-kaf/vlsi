@@ -1,0 +1,83 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Tue May  6 12:39:56 2025
+| Host         : archlinux running 64-bit unknown
+| Command      : report_methodology -file dvlsi2021_lab5_top_methodology_drc_routed.rpt -pb dvlsi2021_lab5_top_methodology_drc_routed.pb -rpx dvlsi2021_lab5_top_methodology_drc_routed.rpx
+| Design       : dvlsi2021_lab5_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 9
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                              | 6          |
+| LATCH-1   | Advisory         | Existing latches in the design                 | 1          |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_fpga_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_fpga_1]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_fpga_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_fpga_1]
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/FSM_sequential_next_state_reg[0] cannot be properly analyzed as its control pin debayering/control_unit_instance/FSM_sequential_next_state_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/FSM_sequential_next_state_reg[1] cannot be properly analyzed as its control pin debayering/control_unit_instance/FSM_sequential_next_state_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/FSM_sequential_next_state_reg[2] cannot be properly analyzed as its control pin debayering/control_unit_instance/FSM_sequential_next_state_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/image_finished_reg cannot be properly analyzed as its control pin debayering/control_unit_instance/image_finished_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/valid_out_reg cannot be properly analyzed as its control pin debayering/control_unit_instance/valid_out_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch debayering/control_unit_instance/wr_en_reg cannot be properly analyzed as its control pin debayering/control_unit_instance/wr_en_reg/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 6 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

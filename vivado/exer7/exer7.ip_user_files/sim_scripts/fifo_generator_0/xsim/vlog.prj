@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "/home/panos/tools/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
+"../../../../exer7.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,1665 @@
+
+*** Running vivado
+    with args -log design_1_PS2PL_DMA_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_PS2PL_DMA_0.tcl
+
+
+****** Vivado v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source design_1_PS2PL_DMA_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1314.258 ; gain = 0.023 ; free physical = 254 ; free virtual = 7356
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/panos/dev/vlsi/vivado/ip_repo/axi_stream_interface_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/panos/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_PS2PL_DMA_0
+Command: synth_design -top design_1_PS2PL_DMA_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 356934
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/panos/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1964.457 ; gain = 370.801 ; free physical = 754 ; free virtual = 5048
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1259.653; parent = 1099.749; children = 159.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2936.250; parent = 1970.398; children = 965.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_PS2PL_DMA_0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/synth/design_1_PS2PL_DMA_0.vhd:104]
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DLYTMR_RESOLUTION bound to: 125 - type: integer 
+	Parameter C_PRMRY_IS_ACLK_ASYNC bound to: 1 - type: integer 
+	Parameter C_ENABLE_MULTI_CHANNEL bound to: 0 - type: integer 
+	Parameter C_NUM_MM2S_CHANNELS bound to: 1 - type: integer 
+	Parameter C_NUM_S2MM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
+	Parameter C_SG_INCLUDE_STSCNTRL_STRM bound to: 0 - type: integer 
+	Parameter C_SG_USE_STSAPP_LENGTH bound to: 0 - type: integer 
+	Parameter C_SG_LENGTH_WIDTH bound to: 26 - type: integer 
+	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_S2MM_STS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_MICRO_DMA bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_INCLUDE_MM2S_SF bound to: 1 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 256 - type: integer 
+	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_SF bound to: 1 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 16 - type: integer 
+	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_INCREASE_THROUGHPUT bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-3491] module 'axi_dma' declared at '/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:21833' bound to instance 'U0' of component 'axi_dma' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/synth/design_1_PS2PL_DMA_0.vhd:320]
+INFO: [Synth 8-638] synthesizing module 'axi_dma' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22178]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_rst_module' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:1595]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_reset' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:603]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_reset' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:603]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_rst_module' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:1595]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_reg_module' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:8436]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_lite_if' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:2066]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized4' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized4' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_lite_if' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:2066]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_register' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:3607]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_register' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:3607]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_reg_module' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:8436]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_mngr' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:15178]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_smple_sm' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:11972]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_smple_sm' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:11972]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_cmdsts_if' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:13960]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_cmdsts_if' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:13960]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sts_mngr' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:14275]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sts_mngr' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:14275]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_mngr' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:15178]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_sofeof_gen' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:11441]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_sofeof_gen' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:11441]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_afifo_autord' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:881]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 103 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 103 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 4 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:1932]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1296]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1907]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1907]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_afifo_autord' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_afifo_autord__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:881]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 4 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:1932]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1296]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_afifo_autord__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
+INFO: [Synth 8-226] default block is never used [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1296]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst__parameterized0' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst__parameterized0' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/6c82/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_omit_wrap' [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:49604]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_omit_wrap' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:49604]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22178]
+INFO: [Synth 8-256] done synthesizing module 'design_1_PS2PL_DMA_0' (0#1) [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/synth/design_1_PS2PL_DMA_0.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element GEN_ASYNC_RESET.p_soft_reset_d3_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:1277]
+WARNING: [Synth 8-6014] Unused sequential element awaddr_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:2160]
+WARNING: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:2162]
+WARNING: [Synth 8-6014] Unused sequential element araddr_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:2164]
+WARNING: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:3995]
+WARNING: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:3996]
+WARNING: [Synth 8-3848] Net mm2s_desc_flush in module/entity axi_dma_mm2s_mngr does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:15095]
+WARNING: [Synth 8-6014] Unused sequential element GEN_ASYNC_CMDSTAT_RESET.sig_sec_reset_in_reg_n_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:472]
+WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
+WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:758]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1391]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:758]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1391]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8048]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:8359]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:12887]
+WARNING: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:13225]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:969]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1391]
+WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/2237/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
+WARNING: [Synth 8-3848] Net m_axi_sg_awuser in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22023]
+WARNING: [Synth 8-3848] Net m_axi_sg_aruser in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22049]
+WARNING: [Synth 8-3848] Net s_axis_s2mm_sts_tready in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22158]
+WARNING: [Synth 8-3848] Net tdest_out_int in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22706]
+WARNING: [Synth 8-3848] Net same_tdest in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22707]
+WARNING: [Synth 8-3848] Net strm_valid in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22739]
+WARNING: [Synth 8-3848] Net bd_eq in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22732]
+WARNING: [Synth 8-3848] Net m_axis_ftch1_desc_available in module/entity axi_dma does not have driver. [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ipshared/70c4/hdl/axi_dma_v7_1_vh_rfs.vhd:22641]
+WARNING: [Synth 8-7129] Port s2mm_aclk in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_aresetn in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmdsts_awclk in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmdsts_aresetn in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wvalid in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[106] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[105] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[104] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[103] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[102] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[101] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[100] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[99] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[98] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[97] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[96] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[95] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[94] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[93] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[92] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[91] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[90] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[89] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[88] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[87] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[86] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[85] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[84] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[83] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[82] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[81] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[80] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[79] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[78] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[77] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[76] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[75] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[74] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[73] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[72] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[71] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[70] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[69] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[68] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[67] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[66] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[65] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[64] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[63] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[62] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[61] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[60] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[59] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[58] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[57] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[56] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[55] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[54] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[53] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[52] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[51] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[50] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[49] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[48] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[47] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[46] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[45] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[44] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[43] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[42] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[41] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[40] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[39] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[38] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[37] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[36] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[35] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[34] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[33] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[32] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[31] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[30] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[29] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[28] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[27] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[26] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[25] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[24] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[23] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[22] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[21] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[20] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[19] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[18] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[17] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[16] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[15] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[14] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[13] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s2mm_cmd_wdata[12] in module axi_datamover_s2mm_omit_wrap is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2196.363 ; gain = 602.707 ; free physical = 544 ; free virtual = 4755
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 159.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3162.219; parent = 2196.367; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2208.238 ; gain = 614.582 ; free physical = 522 ; free virtual = 4736
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 159.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3174.094; parent = 2208.242; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2208.238 ; gain = 614.582 ; free physical = 521 ; free virtual = 4736
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 159.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3174.094; parent = 2208.242; children = 965.852
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2211.207 ; gain = 0.000 ; free physical = 519 ; free virtual = 4731
+INFO: [Netlist 29-17] Analyzing 618 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/design_1_PS2PL_DMA_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.runs/design_1_PS2PL_DMA_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/panos/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_PS2PL_DMA_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 15 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2321.988 ; gain = 0.000 ; free physical = 574 ; free virtual = 4819
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 618 instances were transformed.
+  FDR => FDRE: 618 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2321.988 ; gain = 0.000 ; free physical = 574 ; free virtual = 4819
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/panos/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 625 ; free virtual = 4861
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 165.311
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 618 ; free virtual = 4854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 165.311
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/panos/dev/vlsi/vivado/exer7/exer7.runs/design_1_PS2PL_DMA_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/I_CMD_FIFO/\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /I_CMD_STATUS/\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO /\USE_ASYNC_FIFO.I_ASYNC_FIFO /I_ASYNC_FIFOGEN_FIFO/\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /\GEN_INCLUDE_MM2S_SF.I_RD_SF /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 604 ; free virtual = 4851
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 165.311
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'smpl_cs_reg' in module 'axi_dma_smple_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+            execute_xfer |                               01 |                               01
+             wait_status |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'smpl_cs_reg' using encoding 'sequential' in module 'axi_dma_smple_sm'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-7082] The signal gen_wr_a.gen_word_narrow.mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 1064 ; free virtual = 5283
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 172.272
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 3     
+	   4 Input   12 Bit       Adders := 4     
+	   2 Input   11 Bit       Adders := 1     
+	   4 Input   11 Bit       Adders := 5     
+	   3 Input   11 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 6     
+	   2 Input    5 Bit       Adders := 5     
+	   3 Input    5 Bit       Adders := 4     
+	   4 Input    4 Bit       Adders := 10    
+	   3 Input    4 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 4     
+	   3 Input    3 Bit       Adders := 3     
+	   4 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      4 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 29    
++---Registers : 
+	              185 Bit    Registers := 1     
+	              103 Bit    Registers := 2     
+	               75 Bit    Registers := 2     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 4     
+	               26 Bit    Registers := 2     
+	               23 Bit    Registers := 2     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 38    
+	                4 Bit    Registers := 51    
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 282   
++---RAMs : 
+	             150K Bit	(2048 X 75 bit)          RAMs := 1     
+	               1K Bit	(16 X 103 bit)          RAMs := 1     
+	              128 Bit	(16 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  185 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   23 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   12 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 21    
+	   8 Input    8 Bit        Muxes := 5     
+	   2 Input    7 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 22    
+	   2 Input    4 Bit        Muxes := 9     
+	   3 Input    4 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 104   
+	   3 Input    2 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 21    
+	   2 Input    1 Bit        Muxes := 118   
+	   3 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 6     
+	   8 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-7082] The signal gen_wr_a.gen_word_narrow.mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 75 bits, new ram width 74 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.WVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.WVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[7].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[8].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[9].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 1142 ; free virtual = 5381
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1288.497; parent = 1128.677; children = 172.272
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                                                              | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | 16 x 103(NO_CHANGE)    | W |   | 16 x 103(NO_CHANGE)    |   | R | Port A and B     | 1      | 1      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(NO_CHANGE)      |   | R | Port A and B     | 1      | 0      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 75(NO_CHANGE)    | W |   | 2 K x 75(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2694 ; free virtual = 6957
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.311; parent = 1241.999; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2629 ; free virtual = 6881
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                                                              | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | 16 x 103(NO_CHANGE)    | W |   | 16 x 103(NO_CHANGE)    |   | R | Port A and B     | 1      | 1      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 16 x 8(NO_CHANGE)      | W |   | 16 x 8(NO_CHANGE)      |   | R | Port A and B     | 1      | 0      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 75(NO_CHANGE)    | W |   | 2 K x 75(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2294 ; free virtual = 6541
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int_cdc_to_inferred:in0 to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2096 ; free virtual = 6348
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2091 ; free virtual = 6343
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2063 ; free virtual = 6316
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2062 ; free virtual = 6314
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2063 ; free virtual = 6316
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2066 ; free virtual = 6319
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                 | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[3] | 91     | 91         | 91     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[3] | 38     | 38         | 38     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[3] | 10     | 10         | 10     | 0       | 0      | 0      | 0      | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    47|
+|2     |LUT1     |    24|
+|3     |LUT2     |   140|
+|4     |LUT3     |   275|
+|5     |LUT4     |   163|
+|6     |LUT5     |   150|
+|7     |LUT6     |   214|
+|8     |MUXF7    |    14|
+|9     |RAMB18E1 |     3|
+|12    |RAMB36E1 |     5|
+|14    |SRL16E   |   111|
+|15    |FDR      |   277|
+|16    |FDRE     |  1262|
+|17    |FDSE     |    53|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2068 ; free virtual = 6321
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1440.774; parent = 1255.390; children = 187.312
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3255.828; parent = 2289.977; children = 965.852
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1081 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2321.988 ; gain = 614.582 ; free physical = 2108 ; free virtual = 6358
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2321.988 ; gain = 728.332 ; free physical = 2115 ; free virtual = 6364
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2321.988 ; gain = 0.000 ; free physical = 2137 ; free virtual = 6396
+INFO: [Netlist 29-17] Analyzing 346 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2321.988 ; gain = 0.000 ; free physical = 2023 ; free virtual = 6284
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 277 instances were transformed.
+  FDR => FDRE: 277 instances
+
+Synth Design complete, checksum: 334b3861
+INFO: [Common 17-83] Releasing license: Synthesis
+459 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:03 . Memory (MB): peak = 2321.988 ; gain = 1007.730 ; free physical = 2185 ; free virtual = 6445
+INFO: [Common 17-1381] The checkpoint '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/design_1_PS2PL_DMA_0_synth_1/design_1_PS2PL_DMA_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_PS2PL_DMA_0, cache-ID = ca68f9c53acf7389
+INFO: [Coretcl 2-1174] Renamed 120 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/panos/dev/vlsi/vivado/exer7/exer7.runs/design_1_PS2PL_DMA_0_synth_1/design_1_PS2PL_DMA_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_PS2PL_DMA_0_utilization_synth.rpt -pb design_1_PS2PL_DMA_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May  6 00:25:16 2025...
