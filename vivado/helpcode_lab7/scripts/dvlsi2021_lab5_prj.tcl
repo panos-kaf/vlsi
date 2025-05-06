@@ -11,8 +11,8 @@ if { [info exists ::origin_dir_loc] } {
 }
 
 # Set the project name
-set _xil_proj_name_     "dvlsi2021_ask5_prj"
-set _xil_proj_dir_      "[file normalize $origin_dir/../$_xil_proj_name_]"
+set _xil_proj_name_     "exer7"
+set _xil_proj_dir_      "[file normalize $origin_dir/../../$_xil_proj_name_]"
 set _vhdl_srcs_dir_     "[file normalize $origin_dir/../vhdl_srcs]"
 
 

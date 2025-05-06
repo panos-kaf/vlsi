@@ -77,6 +77,19 @@ architecture arch of dvlsi2021_lab5_top is
 -------------------------------------------
 -- INTERNAL SIGNAL & COMPONENTS DECLARATION
 
+component debayering_filter is
+    generic ( 
+         N : INTEGER := 32
+         );
+    port ( 
+         CLK, RST: in std_logic;
+         valid_in, new_image: in std_logic;
+         valid_out, image_finished: out std_logic;
+         pixel : in std_logic_vector(7 downto 0); 
+         R,G,B : out std_logic_vector(7 downto 0)
+          );
+end component;
+
   signal aclk    : std_logic;
   signal aresetn : std_logic_vector(0 to 0);
 
@@ -85,6 +98,13 @@ architecture arch of dvlsi2021_lab5_top is
   signal tmp_tlast  : std_logic;
   signal tmp_tready : std_logic;
   signal tmp_tvalid : std_logic;
+
+  signal new_image_sig: std_logic;
+  signal image_finished_sig: std_logic;
+  signal valid_in_sig: std_logic;
+  signal valid_out_sig: std_logic;
+  signal rgb_data_sig: std_logic_vector (31 downto 0) := (others => '0');
+  signal pixel_sig: std_logic_vector (7 downto 0);
 
 begin
 
@@ -117,21 +137,36 @@ begin
               ARESETN                             => aresetn, -- reset to accelerator, active low
               ------------------------------------------------------------------------------------
               -- PS2PL-DMA AXI4-STREAM MASTER INTERFACE TO ACCELERATOR AXI4-STREAM SLAVE INTERFACE
-              M_AXIS_TO_ACCELERATOR_tdata         => tmp_tdata,
-              M_AXIS_TO_ACCELERATOR_tkeep         => tmp_tkeep,
-              M_AXIS_TO_ACCELERATOR_tlast         => tmp_tlast,
-              M_AXIS_TO_ACCELERATOR_tready        => tmp_tready,
-              M_AXIS_TO_ACCELERATOR_tvalid        => tmp_tvalid,
+              M_AXIS_TO_ACCELERATOR_tdata         =>     pixel_sig,
+              M_AXIS_TO_ACCELERATOR_tkeep         =>    tmp_tkeep,   --always 1?
+              M_AXIS_TO_ACCELERATOR_tlast           =>      tmp_tlast,       --???
+              M_AXIS_TO_ACCELERATOR_tready        =>     tmp_tready,       --???
+              M_AXIS_TO_ACCELERATOR_tvalid          =>    valid_in_sig,
               ------------------------------------------------------------------------------------
               -- ACCELERATOR AXI4-STREAM MASTER INTERFACE TO PL2P2-DMA AXI4-STREAM SLAVE INTERFACE
-              S_AXIS_S2MM_FROM_ACCELERATOR_tdata  => tmp_tdata & tmp_tdata & tmp_tdata & tmp_tdata,
-              S_AXIS_S2MM_FROM_ACCELERATOR_tkeep  => tmp_tkeep & tmp_tkeep & tmp_tkeep & tmp_tkeep,
-              S_AXIS_S2MM_FROM_ACCELERATOR_tlast  => tmp_tlast,
+              S_AXIS_S2MM_FROM_ACCELERATOR_tdata  => rgb_data_sig,
+              S_AXIS_S2MM_FROM_ACCELERATOR_tkeep  => "1111",  -- always 1?
+              S_AXIS_S2MM_FROM_ACCELERATOR_tlast  => image_finished_sig,
               S_AXIS_S2MM_FROM_ACCELERATOR_tready => tmp_tready,
-              S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => tmp_tvalid
+              S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => valid_out_sig
              );
 
+              tmp_tkeep <= "1";
 ----------------------------
 -- COMPONENTS INSTANTIATIONS
+
+debayering: debayering_filter generic map( N => 32)
+                                                    port map(
+                                                                     CLK => ACLK,
+                                                                     RST => ARESETN(0),
+                                                                     valid_in => valid_in_sig,
+                                                                     new_image => new_image_sig,
+                                                                     valid_out => valid_out_sig,
+                                                                     image_finished => image_finished_sig,
+                                                                     pixel => pixel_sig,
+                                                                     R => rgb_data_sig (23 downto 16),
+                                                                     G => rgb_data_sig (15 downto 8),
+                                                                     B => rgb_data_sig (7 downto 0)
+                                                    );
 
 end architecture; -- arch
