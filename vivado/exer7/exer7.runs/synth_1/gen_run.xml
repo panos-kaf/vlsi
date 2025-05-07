@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746636356" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dvlsi2021_lab5_top.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="dff_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="dff.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="dff_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="dff_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="dff_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="dff.vds"/>
-  <File Type="REPORTS-TCL" Name="dff_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="dff_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="dff.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746637424" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dvlsi2021_lab5_top.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="dvlsi2021_lab5_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="dvlsi2021_lab5_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="dvlsi2021_lab5_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="dvlsi2021_lab5_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="dvlsi2021_lab5_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="dvlsi2021_lab5_top.vds"/>
+  <File Type="REPORTS-TCL" Name="dvlsi2021_lab5_top_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="dvlsi2021_lab5_top_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="dvlsi2021_lab5_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/dff.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/singlebit_shift_register.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/serial2parallel.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,35 +20,48 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/control_unit.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/debayering.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dff.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/rgb_computer.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serial2parallel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/singlebit_shift_register.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -83,7 +75,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dff"/>
+      <Option Name="TopModule" Val="dvlsi2021_lab5_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -110,12 +102,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PS_ARM_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PS2PL_DMA_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL_GEN_ARESETN_100_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL_GEN_ARESETN_50_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL2PS_DMA_0"/>
 </GenRun>

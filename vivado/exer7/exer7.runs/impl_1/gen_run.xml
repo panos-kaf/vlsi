@@ -1,109 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746636356">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1746637425">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="dff_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="dff_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="dvlsi2021_lab5_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="dvlsi2021_lab5_top_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="dff.drc"/>
-  <File Type="BG-BGN" Name="dff.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="dff.sysdef"/>
+  <File Type="BG-DRC" Name="dvlsi2021_lab5_top.drc"/>
+  <File Type="BG-BGN" Name="dvlsi2021_lab5_top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="dvlsi2021_lab5_top.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="dff.ltx"/>
-  <File Type="RBD_FILE" Name="dff.rbd"/>
-  <File Type="NPI_FILE" Name="dff.npi"/>
-  <File Type="RNPI_FILE" Name="dff.rnpi"/>
-  <File Type="CFI_FILE" Name="dff.cfi"/>
-  <File Type="RCFI_FILE" Name="dff.rcfi"/>
-  <File Type="RDI-RDI" Name="dff.vdi"/>
-  <File Type="PDI-FILE" Name="dff.pdi"/>
-  <File Type="BITSTR-MMI" Name="dff.mmi"/>
-  <File Type="BITSTR-BMM" Name="dff_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="dff.nky"/>
-  <File Type="BITSTR-RBT" Name="dff.rbt"/>
-  <File Type="BITSTR-MSK" Name="dff.msk"/>
-  <File Type="BG-BIN" Name="dff.bin"/>
-  <File Type="BG-BIT" Name="dff.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="dff_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="dff_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="dff_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dff_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dff_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dff_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dff_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dff_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="dff_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="dff_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW" Name="dff_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="dff_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="dff_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="dff_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="dff_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="dff_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="dff_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="dff_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="dff_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="dff_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="dff_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dff_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dff_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dff_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="dff_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="dff_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="dff_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="dff_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="dff_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="dff_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="dff_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="dff_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="dff_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="dff_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="dff_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="dff_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="dff_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="dff_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="dff_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="dff_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="dff_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="dff_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="dff_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="dff_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="dff_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="dff_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="dff_pwropt.dcp"/>
-  <File Type="OPT-HWDEF" Name="dff.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dff_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="dff_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="dff_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="dff_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="dff_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="dff_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="dff.tcl"/>
+  <File Type="BITSTR-LTX" Name="dvlsi2021_lab5_top.ltx"/>
+  <File Type="RBD_FILE" Name="dvlsi2021_lab5_top.rbd"/>
+  <File Type="NPI_FILE" Name="dvlsi2021_lab5_top.npi"/>
+  <File Type="RNPI_FILE" Name="dvlsi2021_lab5_top.rnpi"/>
+  <File Type="CFI_FILE" Name="dvlsi2021_lab5_top.cfi"/>
+  <File Type="RCFI_FILE" Name="dvlsi2021_lab5_top.rcfi"/>
+  <File Type="RDI-RDI" Name="dvlsi2021_lab5_top.vdi"/>
+  <File Type="PDI-FILE" Name="dvlsi2021_lab5_top.pdi"/>
+  <File Type="BITSTR-MMI" Name="dvlsi2021_lab5_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="dvlsi2021_lab5_top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="dvlsi2021_lab5_top.nky"/>
+  <File Type="BITSTR-RBT" Name="dvlsi2021_lab5_top.rbt"/>
+  <File Type="BITSTR-MSK" Name="dvlsi2021_lab5_top.msk"/>
+  <File Type="BG-BIN" Name="dvlsi2021_lab5_top.bin"/>
+  <File Type="BG-BIT" Name="dvlsi2021_lab5_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="dvlsi2021_lab5_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="dvlsi2021_lab5_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="dvlsi2021_lab5_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dvlsi2021_lab5_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dvlsi2021_lab5_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dvlsi2021_lab5_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dvlsi2021_lab5_top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="dvlsi2021_lab5_top_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="dvlsi2021_lab5_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="dvlsi2021_lab5_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="dvlsi2021_lab5_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="dvlsi2021_lab5_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="dvlsi2021_lab5_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="dvlsi2021_lab5_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="dvlsi2021_lab5_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="dvlsi2021_lab5_top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="dvlsi2021_lab5_top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="dvlsi2021_lab5_top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="dvlsi2021_lab5_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="dvlsi2021_lab5_top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dvlsi2021_lab5_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dvlsi2021_lab5_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="dvlsi2021_lab5_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="dvlsi2021_lab5_top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="dvlsi2021_lab5_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="dvlsi2021_lab5_top_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="dvlsi2021_lab5_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="dvlsi2021_lab5_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="dvlsi2021_lab5_top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="dvlsi2021_lab5_top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="dvlsi2021_lab5_top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="dvlsi2021_lab5_top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="dvlsi2021_lab5_top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="dvlsi2021_lab5_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="dvlsi2021_lab5_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="dvlsi2021_lab5_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="dvlsi2021_lab5_top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="dvlsi2021_lab5_top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="dvlsi2021_lab5_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="dvlsi2021_lab5_top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="dvlsi2021_lab5_top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="dvlsi2021_lab5_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="dvlsi2021_lab5_top_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="dvlsi2021_lab5_top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="dvlsi2021_lab5_top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="dvlsi2021_lab5_top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="dvlsi2021_lab5_top_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="dvlsi2021_lab5_top_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="dvlsi2021_lab5_top_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="dvlsi2021_lab5_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/dff.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/singlebit_shift_register.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/serial2parallel.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -111,35 +90,48 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/control_unit.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/debayering.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../helpcode_lab7/vhdl_srcs/design_1_wrapper.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dff.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/rgb_computer.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serial2parallel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/singlebit_shift_register.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -153,7 +145,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dff"/>
+      <Option Name="TopModule" Val="dvlsi2021_lab5_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -188,12 +180,11 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PS_ARM_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PS2PL_DMA_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL_GEN_ARESETN_100_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL_GEN_ARESETN_50_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PL2PS_DMA_0"/>
 </GenRun>

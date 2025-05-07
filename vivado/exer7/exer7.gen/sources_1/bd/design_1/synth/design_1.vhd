@@ -1,7 +1,7 @@
 --Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
---Date        : Tue May  6 19:43:20 2025
+--Date        : Wed May  7 20:03:39 2025
 --Host        : archlinux running 64-bit unknown
 --Command     : generate_target design_1.bd
 --Design      : design_1

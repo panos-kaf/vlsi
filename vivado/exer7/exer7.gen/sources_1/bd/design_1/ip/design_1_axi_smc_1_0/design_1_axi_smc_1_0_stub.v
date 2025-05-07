@@ -1,10 +1,10 @@
 // Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-// Date        : Tue May  6 19:44:07 2025
+// Date        : Tue May  6 19:44:06 2025
 // Host        : archlinux running 64-bit unknown
-// Command     : write_verilog -force -mode synth_stub
-//               /home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/design_1_axi_smc_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_axi_smc_1_0 -prefix
+//               design_1_axi_smc_1_0_ design_1_axi_smc_1_0_stub.v
 // Design      : design_1_axi_smc_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

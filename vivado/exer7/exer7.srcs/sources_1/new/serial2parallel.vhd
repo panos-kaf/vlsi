@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
 entity serial2parallel is
     generic( 
             N : INTEGER := 32
