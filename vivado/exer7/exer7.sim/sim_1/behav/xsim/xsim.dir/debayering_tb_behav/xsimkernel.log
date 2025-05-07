@@ -1,0 +1,4 @@
+Running: xsim.dir/debayering_tb_behav/xsimk -simmode gui -wdb debayering_tb_behav.wdb -simrunnum 0 -socket 48397
+Design successfully loaded
+Design Loading Memory Usage: 30216 KB (Peak: 30216 KB)
+Design Loading CPU Usage: 20 ms

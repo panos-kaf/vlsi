@@ -73,18 +73,29 @@ new_image <= '0';
 --pixel <= "00000100";
 --wait for 32000ns;
 
---for i in 1 to 32 loop
---    for j in 1 to 32 loop
---        pixel <= std_logic_vector(to_unsigned(j, 8));
---        wait for 20 ns;
---        end loop;
---end loop;
-
-
-for i in 1 to 1024 loop
-        pixel <= std_logic_vector(to_unsigned(i, 8));
+for i in 1 to 12 loop
+    for j in 1 to  32 loop
+        pixel <= std_logic_vector(to_unsigned(j, 8));
         wait for 20 ns;
+    end loop;
 end loop;
+
+valid_in <= '0';
+wait for 200 ns;
+valid_in <= '1';
+
+for i in 1 to 32 loop
+    for j in 1 to 32 loop
+        pixel <= std_logic_vector(to_unsigned(j, 8));
+        wait for 20 ns;
+        end loop;
+end loop;
+
+
+--for i in 1 to 1024 loop
+--        pixel <= std_logic_vector(to_unsigned(i, 8));
+--        wait for 20 ns;
+--end loop;
 
 wait for 20480ns;
 valid_in <= '0';

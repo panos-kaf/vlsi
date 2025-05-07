@@ -1,7 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-
 entity serial2parallel is
     generic( 
             N : INTEGER := 32
@@ -10,7 +9,8 @@ entity serial2parallel is
          CLK, RST, WR_EN, RD_EN : in std_logic; 
          pixel : in std_logic_vector (7 downto 0);
          pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0);
-         full, empty, almost_full, prog_full: out std_logic
+         full, empty, almost_full, prog_full: out std_logic;
+         global_enable: in std_logic 
     );
 end serial2parallel;
 
@@ -36,7 +36,7 @@ component dff
         Data_Width: integer := 8
             );
     port(
-        CLK, RST: in std_logic;
+        CLK, RST, EN: in std_logic;
         D: in std_logic_vector( Data_Width-1 downto 0);
         Q : out std_logic_vector( Data_Width-1 downto 0)
         );
@@ -65,6 +65,8 @@ signal almost_full_internal: std_logic;
 signal almost_full2, almost_full3: std_logic;
 signal prog_full1, prog_full2, prog_full3: std_logic;
 
+signal g_rden1, g_rden2, g_rden3, g_wren1, g_wren2, g_wren3: std_logic;
+
 begin
 
 full <= full1;
@@ -83,13 +85,20 @@ write_shift_reg3: singlebit_shift_register generic map(Depth => N)
 read_shift_reg3: singlebit_shift_register generic map(Depth => N)
                                       port map(CLK => CLK, RST => RST, D => rden2,Q => rden3);                                      
 
+g_rden1 <= global_enable and RD_EN;
+g_rden2 <= global_enable and rden2;
+g_rden3 <= global_enable and rden3;
+
+g_wren1 <= global_enable and WR_EN;
+g_wren2 <= global_enable and wren2;
+g_wren3 <= global_enable and wren3;
 
 fifo1: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
                                  din => pixel,
-                                 wr_en => WR_EN,
-                                 rd_en => RD_EN,
+                                 wr_en => g_wren1,
+                                 rd_en => g_rden1,
                                  dout => fifo1_out,
                                  full => full1,
                                  empty => empty1,
@@ -100,18 +109,21 @@ fifo1: fifo_generator_0 port map(
 dff_00: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => fifo1_out,
                                      Q => pixels(0,0)
 );
 dff_01: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(0,0),
                                      Q => pixels(0,1)
 );
 dff_02: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(0,1),
                                      Q => pixels(0,2)
 );
@@ -120,8 +132,8 @@ fifo2: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
                                  din => fifo1_out,
-                                 wr_en => wren2,
-                                 rd_en => rden2,
+                                 wr_en => g_wren2,
+                                 rd_en => g_rden2,
                                  dout => fifo2_out,
                                  full => full2,
                                  empty => empty2,
@@ -132,18 +144,21 @@ fifo2: fifo_generator_0 port map(
 dff_10: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => fifo2_out,
                                      Q => pixels(1,0)
 );
 dff_11: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(1,0),
                                      Q => pixels(1,1)
 );
 dff_12: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(1,1),
                                      Q => pixels(1,2)
 );
@@ -152,8 +167,8 @@ fifo3: fifo_generator_0 port map(
                                  clk => CLK,
                                  srst => RST,
                                  din => fifo2_out,
-                                 wr_en => wren3,
-                                 rd_en => rden3,
+                                 wr_en => g_wren3,
+                                 rd_en => g_rden3,
                                  dout => fifo3_out,
                                  full => full3,
                                  empty => empty3,
@@ -164,18 +179,21 @@ fifo3: fifo_generator_0 port map(
 dff_20: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => fifo3_out,
                                      Q => pixels(2,0)
 );
 dff_21: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(2,0),
                                      Q => pixels(2,1)
 );
 dff_22: dff port map(
                                      CLK => CLK,
                                      RST => RST,
+                                     EN => global_enable,
                                      D => pixels(2,1),
                                      Q => pixels(2,2)
 );

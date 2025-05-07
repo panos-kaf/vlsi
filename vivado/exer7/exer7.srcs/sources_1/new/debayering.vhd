@@ -26,7 +26,7 @@ component control_unit is
          valid_in, new_image: in std_logic;
          valid_out, image_finished: out std_logic;
          full, empty: in std_logic;
-         rd_en, wr_en, compute_enable: out std_logic;
+         s2p_enable, rd_en, wr_en, compute_enable: out std_logic;
          color_mode: out std_logic_vector(1 downto 0);
          prog_full: in std_logic;
          line_start, line_end: out std_logic
@@ -42,7 +42,8 @@ component serial2parallel is
          pixel : in std_logic_vector (7 downto 0);
          pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0);
          full, empty: out std_logic;
-         prog_full: out std_logic 
+         prog_full: out std_logic ;
+         global_enable: in std_logic
     );
 end component;
 
@@ -63,6 +64,7 @@ signal pixel1_internal, pixel2_internal, pixel3_internal, pixel4_internal, pixel
 signal pixel6_internal, pixel7_internal, pixel8_internal, pixel9_internal: std_logic_vector(7 downto 0);
 signal prog_full_internal: std_logic;
 signal line_start_internal, line_end_internal: std_logic;
+signal s2p_enable_internal: std_logic;
 
 begin
 
@@ -76,6 +78,7 @@ control_unit_instance: control_unit generic map( N => N)
                                               image_finished => image_finished,
                                               full => full_internal,
                                               empty => empty_internal,
+                                              s2p_enable => s2p_enable_internal,
                                               wr_en => wr_en_internal,
                                               rd_en => rd_en_internal,
                                               compute_enable => compute_internal,
@@ -103,7 +106,8 @@ serial2parallel_instance: serial2parallel generic map ( N => N)
                                                     pixel9 => pixel9_internal,
                                                     full => full_internal,
                                                     empty => empty_internal,
-                                                    prog_full => prog_full_internal
+                                                    prog_full => prog_full_internal,
+                                                    global_enable => s2p_enable_internal
 
                                                     );
                                                     

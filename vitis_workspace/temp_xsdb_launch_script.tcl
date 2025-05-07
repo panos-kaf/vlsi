@@ -1,1 +1,1 @@
-set xsdb_idle_timeout -1;source /home/panos/Xilinx/Vitis/2022.2/scripts/xsdb/xsdb/xsdb-server.tcl
+set xsdb_idle_timeout -1;source /scripts/xsdb/xsdb/xsdb-server.tcl

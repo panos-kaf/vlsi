@@ -7,7 +7,7 @@ entity dff is
         Data_Width: integer := 8
             );
     port(
-        CLK, RST: in std_logic;
+        CLK, RST, EN: in std_logic;
         D: in std_logic_vector( Data_Width-1 downto 0);
         Q : out std_logic_vector( Data_Width-1 downto 0)
         );
@@ -23,10 +23,11 @@ process(CLK,RST)
 begin
     if RST = '1'then
         Q <= (others => '0');
-    elsif rising_edge(CLK) then   
-        Q <= D;
-    end if; 
-    
+    elsif EN = '1' then
+        if rising_edge(CLK) then   
+            Q <= D;
+            end if; 
+    end if;
 end process;
 
 end behavioral;

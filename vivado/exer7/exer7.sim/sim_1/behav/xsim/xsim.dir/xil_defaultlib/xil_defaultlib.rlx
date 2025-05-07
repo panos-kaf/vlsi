@@ -1,0 +1,13 @@
+0.7
+2020.2
+Feb 21 2023
+20:06:57
+/home/panos/dev/vlsi/vivado/exer7/exer7.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v,1746524067,verilog,,,,fifo_generator_0,,axi_vip_v1_1_13;processing_system7_vip_v1_0_15;smartconnect_v1_0;xilinx_vip,../../../../exer7.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog;../../../../exer7.gen/sources_1/bd/design_1/ipshared/ec67/hdl;../../../../exer7.gen/sources_1/bd/design_1/ipshared/ee60/hdl;../../../../exer7.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog;/home/panos/tools/Xilinx/Vivado/2022.2/data/xilinx_vip/include,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,axi_vip_v1_1_13;processing_system7_vip_v1_0_15;smartconnect_v1_0;xilinx_vip,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sim_1/new/debayering_tb.vhd,1746636148,vhdl,,,,debayering_tb,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/control_unit.vhd,1746635914,vhdl,,,,control_unit,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/debayering.vhd,1746630713,vhdl,,,,debayering_filter,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/dff.vhd,1746616587,vhdl,,,,dff,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/rgb_computer.vhd,1746458940,vhdl,,,,rgb_computer,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/serial2parallel.vhd,1746636030,vhdl,,,,serial2parallel,,,,,,,,
+/home/panos/dev/vlsi/vivado/exer7/exer7.srcs/sources_1/new/singlebit_shift_register.vhd,1746458940,vhdl,,,,singlebit_shift_register,,,,,,,,
