@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Wed May  7 20:26:04 2025
+| Date             : Wed May  7 20:32:02 2025
 | Host             : archlinux running 64-bit unknown
 | Command          : report_power -file dvlsi2021_lab5_top_power_routed.rpt -pb dvlsi2021_lab5_top_power_summary_routed.pb -rpx dvlsi2021_lab5_top_power_routed.rpx
 | Design           : dvlsi2021_lab5_top
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.015 |        4 |       --- |             --- |
-| Slice Logic              |     0.004 |    10736 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     3097 |     17600 |           17.60 |
+| Slice Logic              |     0.004 |    10742 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     3100 |     17600 |           17.61 |
 |   CARRY4                 |    <0.001 |      203 |      4400 |            4.61 |
 |   LUT as Distributed RAM |    <0.001 |      226 |      6000 |            3.77 |
-|   Register               |    <0.001 |     5204 |     35200 |           14.78 |
-|   LUT as Shift Register  |    <0.001 |      216 |      6000 |            3.60 |
+|   Register               |    <0.001 |     5208 |     35200 |           14.80 |
+|   LUT as Shift Register  |    <0.001 |      217 |      6000 |            3.62 |
 |   F7/F8 Muxes            |    <0.001 |       14 |     17600 |            0.08 |
 |   Others                 |     0.000 |      663 |       --- |             --- |
-| Signals                  |     0.004 |     7881 |       --- |             --- |
+| Signals                  |     0.004 |     7885 |       --- |             --- |
 | Block RAM                |     0.001 |     12.5 |        60 |           20.83 |
 | PS7                      |     1.564 |        1 |       --- |             --- |
 | Static Power             |     0.122 |          |           |                 |
@@ -160,7 +160,7 @@ Table of Contents
 |       PS_ARM                 |     1.564 |
 |       axi_smc                |     0.003 |
 |       axi_smc_1              |     0.004 |
-|       ps7_0_axi_periph       |     0.002 |
+|       ps7_0_axi_periph       |     0.003 |
 +------------------------------+-----------+
 
 

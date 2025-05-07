@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Wed May  7 20:26:01 2025
+| Date         : Wed May  7 20:31:59 2025
 | Host         : archlinux running 64-bit unknown
 | Command      : report_drc -file dvlsi2021_lab5_top_drc_routed.rpt -pb dvlsi2021_lab5_top_drc_routed.pb -rpx dvlsi2021_lab5_top_drc_routed.rpx
 | Design       : dvlsi2021_lab5_top
@@ -24,10 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 17
+             Violations found: 18
 +-----------+----------+----------------------------+------------+
 | Rule      | Severity | Description                | Violations |
 +-----------+----------+----------------------------+------------+
+| PDRC-63   | Warning  | SLICEM_5lutO5_A5           | 1          |
 | PDRC-153  | Warning  | Gated clock check          | 3          |
 | RBOR-1    | Warning  | RAMB output registers      | 1          |
 | REQP-1840 | Warning  | RAMB18 async control check | 12         |
@@ -36,6 +37,11 @@ Table of Contents
 
 2. REPORT DETAILS
 -----------------
+PDRC-63#1 Warning
+SLICEM_5lutO5_A5  
+Dangling output pin O5 on site SLICE_X38Y3:A5LUT. For this programming the O5 output pin should have a signal.
+Related violations: <none>
+
 PDRC-153#1 Warning
 Gated clock check  
 Net debayering/control_unit_instance/image_finished_reg_i_2_n_0 is a gated clock net sourced by a combinational pin debayering/control_unit_instance/image_finished_reg_i_2/O, cell debayering/control_unit_instance/image_finished_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
