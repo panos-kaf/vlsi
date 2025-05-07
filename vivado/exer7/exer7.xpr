@@ -98,23 +98,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_50_0/design_1_PL_GEN_ARESETN_50_0.xci">
-          <Proxy FileSetName="design_1_PL_GEN_ARESETN_50_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL2PS_DMA_0/design_1_PL2PS_DMA_0.xci">
           <Proxy FileSetName="design_1_PL2PS_DMA_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
-          <Proxy FileSetName="design_1_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_100_0/design_1_PL_GEN_ARESETN_100_0.xci">
           <Proxy FileSetName="design_1_PL_GEN_ARESETN_100_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xci">
+          <Proxy FileSetName="design_1_PS2PL_DMA_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS_ARM_0/design_1_PS_ARM_0.xci">
           <Proxy FileSetName="design_1_PS_ARM_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xci">
-          <Proxy FileSetName="design_1_PS2PL_DMA_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
+          <Proxy FileSetName="design_1_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_50_0/design_1_PL_GEN_ARESETN_50_0.xci">
+          <Proxy FileSetName="design_1_PL_GEN_ARESETN_50_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/control_unit.vhd">
