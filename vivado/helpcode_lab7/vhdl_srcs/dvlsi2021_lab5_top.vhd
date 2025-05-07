@@ -158,6 +158,7 @@ begin
               rgb_data_sig <= "00000000" & R_sig & G_sig & B_sig;
               new_image_sig <= '1';
               debayering_reset <= not ARESETN(0);
+              valid_out_sig <= '1';
 ----------------------------
 -- COMPONENTS INSTANTIATIONS
 

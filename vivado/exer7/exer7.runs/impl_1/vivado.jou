@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Tue May  6 21:01:34 2025
-# Process ID: 277786
+# Start of session at: Wed May  7 13:18:15 2025
+# Process ID: 32678
 # Current directory: /home/panos/dev/vlsi/vivado/exer7/exer7.runs/impl_1
 # Command line: vivado -log dvlsi2021_lab5_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dvlsi2021_lab5_top.tcl -notrace
 # Log file: /home/panos/dev/vlsi/vivado/exer7/exer7.runs/impl_1/dvlsi2021_lab5_top.vdi
 # Journal file: /home/panos/dev/vlsi/vivado/exer7/exer7.runs/impl_1/vivado.jou
-# Running On: archlinux, OS: Linux, CPU Frequency: 800.932 MHz, CPU Physical cores: 12, Host memory: 16160 MB
+# Running On: archlinux, OS: Linux, CPU Frequency: 884.734 MHz, CPU Physical cores: 12, Host memory: 16160 MB
 #-----------------------------------------------------------
 source dvlsi2021_lab5_top.tcl -notrace

@@ -117,11 +117,12 @@ begin
         image_finished <= '0';
         valid_out <= '1';
         if counter = MAX then
+            image_finished <= '1';
             next_state <= FINISHED;
         end if;
     
     when FINISHED =>
-        image_finished <= '1';
+        image_finished <= '0';
         rd_en <= '0';
         wr_en <= '0';
         valid_out <= '0';
