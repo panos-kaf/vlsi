@@ -140,8 +140,8 @@ begin
               ------------------------------------------------------------------------------------
               -- PS2PL-DMA AXI4-STREAM MASTER INTERFACE TO ACCELERATOR AXI4-STREAM SLAVE INTERFACE
               M_AXIS_TO_ACCELERATOR_tdata         =>     pixel_sig,
-              M_AXIS_TO_ACCELERATOR_tkeep         =>    tmp_tkeep,   --always 1?
-              M_AXIS_TO_ACCELERATOR_tlast           =>      tmp_tlast,       --???
+              M_AXIS_TO_ACCELERATOR_tkeep         =>    open,   --always 1?
+              M_AXIS_TO_ACCELERATOR_tlast           =>      open,       --???
               M_AXIS_TO_ACCELERATOR_tready        =>     '1',       --???
               M_AXIS_TO_ACCELERATOR_tvalid          =>    valid_in_sig,
               ------------------------------------------------------------------------------------
@@ -149,13 +149,13 @@ begin
               S_AXIS_S2MM_FROM_ACCELERATOR_tdata  => rgb_data_sig,
               S_AXIS_S2MM_FROM_ACCELERATOR_tkeep  => "1111",  -- always 1?
               S_AXIS_S2MM_FROM_ACCELERATOR_tlast  => image_finished_sig,
-              S_AXIS_S2MM_FROM_ACCELERATOR_tready => tmp_tready,
+              S_AXIS_S2MM_FROM_ACCELERATOR_tready => open,
               S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => '1' -- !!!
              );
 
 --              tmp_tkeep <= "1";
 --              tmp_tready <= '1';
-              rgb_data_sig <= "0000000" &valid_out_sig & R_sig & G_sig & B_sig;
+              rgb_data_sig <= "000" & debayering_reset & valid_in_sig &new_image_sig & image_finished_sig &valid_out_sig & R_sig & G_sig & B_sig;
               new_image_sig <= '1';
               debayering_reset <= not ARESETN(0);
 --              valid_out_sig <= '1';
