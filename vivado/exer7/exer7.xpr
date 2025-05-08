@@ -61,7 +61,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo"/>
-    <Option Name="WTXSimLaunchSim" Val="5"/>
+    <Option Name="WTXSimLaunchSim" Val="7"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -98,23 +98,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL2PS_DMA_0/design_1_PL2PS_DMA_0.xci">
-          <Proxy FileSetName="design_1_PL2PS_DMA_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_100_0/design_1_PL_GEN_ARESETN_100_0.xci">
-          <Proxy FileSetName="design_1_PL_GEN_ARESETN_100_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xci">
-          <Proxy FileSetName="design_1_PS2PL_DMA_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
+          <Proxy FileSetName="design_1_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS_ARM_0/design_1_PS_ARM_0.xci">
           <Proxy FileSetName="design_1_PS_ARM_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
-          <Proxy FileSetName="design_1_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2PL_DMA_0/design_1_PS2PL_DMA_0.xci">
+          <Proxy FileSetName="design_1_PS2PL_DMA_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_100_0/design_1_PL_GEN_ARESETN_100_0.xci">
+          <Proxy FileSetName="design_1_PL_GEN_ARESETN_100_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL_GEN_ARESETN_50_0/design_1_PL_GEN_ARESETN_50_0.xci">
           <Proxy FileSetName="design_1_PL_GEN_ARESETN_50_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PL2PS_DMA_0/design_1_PL2PS_DMA_0.xci">
+          <Proxy FileSetName="design_1_PL2PS_DMA_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/control_unit.vhd">
@@ -161,13 +161,6 @@
       </File>
       <File Path="$PPRDIR/../helpcode_lab7/vhdl_srcs/dvlsi2021_lab5_top.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/debayering_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

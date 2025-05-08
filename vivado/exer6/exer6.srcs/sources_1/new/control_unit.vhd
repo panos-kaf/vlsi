@@ -17,7 +17,8 @@ entity control_unit is
          counter_debug: out INTEGER;
          almost_full: in std_logic;
          prog_full: in std_logic;
-         line_start, line_end: out std_logic
+         line_start, line_end: out std_logic;
+         last_line: out std_logic
          );
 end control_unit;
 
@@ -32,6 +33,7 @@ signal start_mode: std_logic := '0';
 signal counter: INTEGER := 0;
 constant ALMOST_MAX: INTEGER := N*N;
 constant MAX: INTEGER := N*N + 2*N + 2;
+constant LAST: INTEGER := N*N + N + 2;
 
 begin
 
@@ -50,6 +52,8 @@ begin
         counter <= 0;
         column_counter <= '0';
         line_counter <= '0';
+        last_line <= '0';
+        
     elsif rising_edge(CLK) then
         current_state <= next_state;
         
@@ -72,6 +76,10 @@ begin
         if valid_in = '1' then
             counter <= counter + 1;
         end if;
+         
+        if counter >= LAST then
+            last_line <= '1';
+        end if;
             
         if counter = (2*N + 2 ) then
             start_mode <= '1';
@@ -81,7 +89,7 @@ begin
     
 end process;
 
-process(CLK,current_state, new_image)
+process(CLK)
 begin  
     case current_state is
     when IDLE =>
@@ -118,7 +126,7 @@ begin
     when READ_WRITE =>
         prev_state <= READ_WRITE;
         compute_enable <= start_mode;
-        valid_out <= '1';
+        valid_out <= start_mode;
         wr_en <= '1';
         rd_en <= '1';
         s2p_enable <= '1';
@@ -142,17 +150,17 @@ begin
         if valid_in = '0' then
             next_state <= PAUSED;
         elsif counter = MAX then
-            image_finished <= '1';
+            --image_finished <= '1';
             next_state <= FINISHED;
         end if;
     
     when FINISHED =>
-        image_finished <= '0';
+        image_finished <= '1';
         compute_enable <= start_mode;
         s2p_enable <= '1';
         rd_en <= '0';
         wr_en <= '0';
-        valid_out <= '0';
+        valid_out <= '1';
         next_state <= IDLE;
 
   when PAUSED =>

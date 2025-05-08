@@ -12,8 +12,8 @@ entity debayering_filter is
          valid_out, image_finished: out std_logic;
          pixel : in std_logic_vector(7 downto 0); 
          R,G,B : out std_logic_vector(7 downto 0);
-         full: out std_logic;
          -- debugging signals
+         full: out std_logic;
          pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: out std_logic_vector (7 downto 0);
          compute_enable_debug: out std_logic;
          color_mode: out std_logic_vector(1 downto 0);
@@ -42,7 +42,8 @@ component control_unit is
          counter_debug: out INTEGER;
          almost_full: in std_logic;
          prog_full: in std_logic;
-         line_start, line_end: out std_logic
+         line_start, line_end: out std_logic;
+         last_line: out std_logic
          );
 end component;
 
@@ -63,7 +64,7 @@ end component;
 
 component rgb_computer is
      port(
-        CLK, RST, compute_enable, line_start, line_end: in std_logic;
+        CLK, RST, compute_enable, line_start, line_end, last_line: in std_logic;
         color_mode: in std_logic_vector(1 downto 0);
         pixel1, pixel2, pixel3, pixel4, pixel5, pixel6, pixel7, pixel8, pixel9: in std_logic_vector (7 downto 0);
         R, G, B: out std_logic_vector(7 downto 0)
@@ -80,6 +81,7 @@ signal almost_full_internal: std_logic;
 signal prog_full_internal: std_logic;
 signal line_start_internal, line_end_internal: std_logic;
 signal s2p_enable_internal: std_logic;
+signal last_line_internal: std_logic;
 
 begin
 
@@ -125,7 +127,8 @@ control_unit_instance: control_unit generic map( N => N)
                                               almost_full => almost_full_internal,
                                               prog_full => prog_full_internal,
                                               line_start => line_start_internal,
-                                              line_end => line_end_internal
+                                              line_end => line_end_internal,
+                                              last_line => last_line_internal
                                               );
                                             
 serial2parallel_instance: serial2parallel generic map ( N => N)
@@ -157,6 +160,7 @@ rgb_compute_instance: rgb_computer port map(
                                             compute_enable => compute_internal,
                                             line_start => line_start_internal,
                                             line_end => line_end_internal,
+                                            last_line => last_line_internal,
                                             color_mode => mode_internal,
                                             pixel1 => pixel1_internal,
                                             pixel2 => pixel2_internal, 

@@ -135,7 +135,7 @@ begin
               FIXED_IO_ps_porb  => FIXED_IO_ps_porb,
               --------------------------------------------------------------------------
               ----------------------------------------------- PL (FPGA) COMMON INTERFACE
-              ACLK                                => aclk,    -- clock to accelerator
+              ACLK                                    => aclk,    -- clock to accelerator
               ARESETN                             => aresetn, -- reset to accelerator, active low
               ------------------------------------------------------------------------------------
               -- PS2PL-DMA AXI4-STREAM MASTER INTERFACE TO ACCELERATOR AXI4-STREAM SLAVE INTERFACE
@@ -150,15 +150,15 @@ begin
               S_AXIS_S2MM_FROM_ACCELERATOR_tkeep  => "1111",  -- always 1?
               S_AXIS_S2MM_FROM_ACCELERATOR_tlast  => image_finished_sig,
               S_AXIS_S2MM_FROM_ACCELERATOR_tready => tmp_tready,
-              S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => valid_out_sig
+              S_AXIS_S2MM_FROM_ACCELERATOR_tvalid => '1' -- !!!
              );
 
 --              tmp_tkeep <= "1";
 --              tmp_tready <= '1';
-              rgb_data_sig <= "00000000" & R_sig & G_sig & B_sig;
+              rgb_data_sig <= "0000000" &valid_out_sig & R_sig & G_sig & B_sig;
               new_image_sig <= '1';
               debayering_reset <= not ARESETN(0);
-              valid_out_sig <= '1';
+--              valid_out_sig <= '1';
 ----------------------------
 -- COMPONENTS INSTANTIATIONS
 
