@@ -344,9 +344,11 @@
 						"ACLK": { "actual": "M00_ACLK"},
 						"ARADDR": { "actual": "M00_AXI_araddr[31:0]"},
 						"ARESETN": { "actual": "ARESETN"},
+						"ARPROT": { "actual": "M00_AXI_arprot[2:0]"},
 						"ARREADY": { "actual": "M00_AXI_arready[0:0]"},
 						"ARVALID": { "actual": "M00_AXI_arvalid[0:0]"},
 						"AWADDR": { "actual": "M00_AXI_awaddr[31:0]"},
+						"AWPROT": { "actual": "M00_AXI_awprot[2:0]"},
 						"AWREADY": { "actual": "M00_AXI_awready[0:0]"},
 						"AWVALID": { "actual": "M00_AXI_awvalid[0:0]"},
 						"BREADY": { "actual": "M00_AXI_bready[0:0]"},
@@ -358,6 +360,7 @@
 						"RVALID": { "actual": "M00_AXI_rvalid[0:0]"},
 						"WDATA": { "actual": "M00_AXI_wdata[31:0]"},
 						"WREADY": { "actual": "M00_AXI_wready[0:0]"},
+						"WSTRB": { "actual": "M00_AXI_wstrb[3:0]"},
 						"WVALID": { "actual": "M00_AXI_wvalid[0:0]"}
 					}
 				},
@@ -367,9 +370,11 @@
 						"ACLK": { "actual": "M01_ACLK"},
 						"ARADDR": { "actual": "M01_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "ARESETN"},
+						"ARPROT": { "actual": "M01_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "M01_AXI_arready[1:1]"},
 						"ARVALID": { "actual": "M01_AXI_arvalid[1:1]"},
 						"AWADDR": { "actual": "M01_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "M01_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "M01_AXI_awready[1:1]"},
 						"AWVALID": { "actual": "M01_AXI_awvalid[1:1]"},
 						"BREADY": { "actual": "M01_AXI_bready[1:1]"},
@@ -381,6 +386,7 @@
 						"RVALID": { "actual": "M01_AXI_rvalid[1:1]"},
 						"WDATA": { "actual": "M01_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "M01_AXI_wready[1:1]"},
+						"WSTRB": { "actual": "M01_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "M01_AXI_wvalid[1:1]"}
 					}
 				},
@@ -435,9 +441,11 @@
 						"ACLK": { "actual": "M_ACLK"},
 						"ARADDR": { "actual": "M_AXI_araddr[31:0]"},
 						"ARESETN": { "actual": "M_ARESETN"},
+						"ARPROT": { "actual": "M_AXI_arprot[2:0]"},
 						"ARREADY": { "actual": "M_AXI_arready[0:0]"},
 						"ARVALID": { "actual": "M_AXI_arvalid[0:0]"},
 						"AWADDR": { "actual": "M_AXI_awaddr[31:0]"},
+						"AWPROT": { "actual": "M_AXI_awprot[2:0]"},
 						"AWREADY": { "actual": "M_AXI_awready[0:0]"},
 						"AWVALID": { "actual": "M_AXI_awvalid[0:0]"},
 						"BREADY": { "actual": "M_AXI_bready[0:0]"},
@@ -449,6 +457,7 @@
 						"RVALID": { "actual": "M_AXI_rvalid[0:0]"},
 						"WDATA": { "actual": "M_AXI_wdata[31:0]"},
 						"WREADY": { "actual": "M_AXI_wready[0:0]"},
+						"WSTRB": { "actual": "M_AXI_wstrb[3:0]"},
 						"WVALID": { "actual": "M_AXI_wvalid[0:0]"}
 					}
 				},
@@ -458,9 +467,11 @@
 						"ACLK": { "actual": "S_ACLK"},
 						"ARADDR": { "actual": "S_AXI_araddr[31:0]"},
 						"ARESETN": { "actual": "S_ARESETN"},
+						"ARPROT": { "actual": "S_AXI_arprot[2:0]"},
 						"ARREADY": { "actual": "S_AXI_arready[0:0]"},
 						"ARVALID": { "actual": "S_AXI_arvalid[0:0]"},
 						"AWADDR": { "actual": "S_AXI_awaddr[31:0]"},
+						"AWPROT": { "actual": "S_AXI_awprot[2:0]"},
 						"AWREADY": { "actual": "S_AXI_awready[0:0]"},
 						"AWVALID": { "actual": "S_AXI_awvalid[0:0]"},
 						"BREADY": { "actual": "S_AXI_bready[0:0]"},
@@ -472,6 +483,7 @@
 						"RVALID": { "actual": "S_AXI_rvalid[0:0]"},
 						"WDATA": { "actual": "S_AXI_wdata[31:0]"},
 						"WREADY": { "actual": "S_AXI_wready[0:0]"},
+						"WSTRB": { "actual": "S_AXI_wstrb[3:0]"},
 						"WVALID": { "actual": "S_AXI_wvalid[0:0]"}
 					}
 				},
@@ -481,9 +493,11 @@
 						"ACLK": { "actual": "M_ACLK"},
 						"ARADDR": { "actual": "M_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "M_ARESETN"},
+						"ARPROT": { "actual": "M_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "M_AXI_arready[1:1]"},
 						"ARVALID": { "actual": "M_AXI_arvalid[1:1]"},
 						"AWADDR": { "actual": "M_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "M_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "M_AXI_awready[1:1]"},
 						"AWVALID": { "actual": "M_AXI_awvalid[1:1]"},
 						"BREADY": { "actual": "M_AXI_bready[1:1]"},
@@ -495,6 +509,7 @@
 						"RVALID": { "actual": "M_AXI_rvalid[1:1]"},
 						"WDATA": { "actual": "M_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "M_AXI_wready[1:1]"},
+						"WSTRB": { "actual": "M_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "M_AXI_wvalid[1:1]"}
 					}
 				},
@@ -504,9 +519,11 @@
 						"ACLK": { "actual": "S_ACLK"},
 						"ARADDR": { "actual": "S_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "S_ARESETN"},
+						"ARPROT": { "actual": "S_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "S_AXI_arready[1:1]"},
 						"ARVALID": { "actual": "S_AXI_arvalid[1:1]"},
 						"AWADDR": { "actual": "S_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "S_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "S_AXI_awready[1:1]"},
 						"AWVALID": { "actual": "S_AXI_awvalid[1:1]"},
 						"BREADY": { "actual": "S_AXI_bready[1:1]"},
@@ -518,6 +535,7 @@
 						"RVALID": { "actual": "S_AXI_rvalid[1:1]"},
 						"WDATA": { "actual": "S_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "S_AXI_wready[1:1]"},
+						"WSTRB": { "actual": "S_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "S_AXI_wvalid[1:1]"}
 					}
 				},

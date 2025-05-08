@@ -25,7 +25,9 @@
         },
         "m00_couplers": {},
         "m01_couplers": {}
-      }
+      },
+      "ila_0": "",
+      "ila_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2000,6 +2002,18 @@
             ]
           }
         }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip/design_1_ila_0_0/design_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0"
+      },
+      "ila_1": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_1_0",
+        "xci_path": "ip/design_1_ila_1_0/design_1_ila_1_0.xci",
+        "inst_hier_path": "ila_1"
       }
     },
     "interface_nets": {
@@ -2060,13 +2074,15 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "PS2PL_DMA/S_AXI_LITE",
-          "ps7_0_axi_periph/M00_AXI"
+          "ps7_0_axi_periph/M00_AXI",
+          "ila_0/SLOT_0_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "PL2PS_DMA/S_AXI_LITE",
-          "ps7_0_axi_periph/M01_AXI"
+          "ps7_0_axi_periph/M01_AXI",
+          "ila_1/SLOT_0_AXI"
         ]
       }
     },
@@ -2081,7 +2097,9 @@
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/M01_ACLK",
-          "ps7_0_axi_periph/S00_ACLK"
+          "ps7_0_axi_periph/S00_ACLK",
+          "ila_1/clk",
+          "ila_0/clk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {

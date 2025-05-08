@@ -146,7 +146,7 @@ begin
               M_AXIS_TO_ACCELERATOR_tdata         =>     pixel_sig,
               M_AXIS_TO_ACCELERATOR_tkeep         =>    open,   --always 1?
               M_AXIS_TO_ACCELERATOR_tlast           =>      open,       --???
-              M_AXIS_TO_ACCELERATOR_tready        =>     ready_sig,       --???
+              M_AXIS_TO_ACCELERATOR_tready        =>     '1',       --???
               M_AXIS_TO_ACCELERATOR_tvalid          =>    valid_in_sig,
               ------------------------------------------------------------------------------------
               -- ACCELERATOR AXI4-STREAM MASTER INTERFACE TO PL2P2-DMA AXI4-STREAM SLAVE INTERFACE
@@ -162,7 +162,7 @@ begin
               rgb_data_sig <= "000" & debayering_reset & valid_in_sig &new_image_sig & image_finished_sig &valid_out_sig & R_sig & G_sig & B_sig;
               new_image_sig <= '1';
               debayering_reset <= not ARESETN(0);
---              valid_out_sig <= '1';
+              valid_out_sig <= '1';
 ----------------------------
 -- COMPONENTS INSTANTIATIONS
 
@@ -193,19 +193,19 @@ process (aclk)
     end process;
 
  
-    process (aclk)
-    begin
-        if rising_edge(aclk) then
-            if aresetn(0) = '0' then
-                rst_state <= '0';
-            elsif valid_in_sig = '1' and rst_state = '0' then
-                rst_state <= '1';
-            elsif image_finished_sig <= '1' then
-                rst_state <= '0';
-            end if;
-        end if;
-    end process;
+--    process (aclk)
+--    begin
+--        if rising_edge(aclk) then
+--            if aresetn(0) = '0' then
+--                rst_state <= '0';
+--            elsif valid_in_sig = '1' and rst_state = '0' then
+--                rst_state <= '1';
+--            elsif image_finished_sig <= '1' then
+--                rst_state <= '0';
+--            end if;
+--        end if;
+--    end process;
     
-    new_image_sig <= '1' when rst_state = '0' and valid_in_sig = '1' else '0'; 
+--    new_image_sig <= '1' when rst_state = '0' and valid_in_sig = '1' else '0'; 
 
 end architecture; -- arch
