@@ -107,6 +107,10 @@ end component;
   signal pixel_sig: std_logic_vector (7 downto 0);
   signal r_sig, g_sig, b_sig: std_logic_vector(7 downto 0);
   signal debayering_reset : std_logic;
+  
+  signal valid_ready: std_logic := '0';
+  signal ready_sig: std_logic;
+  signal rst_state: std_logic := '0';
 
 begin
 
@@ -142,7 +146,7 @@ begin
               M_AXIS_TO_ACCELERATOR_tdata         =>     pixel_sig,
               M_AXIS_TO_ACCELERATOR_tkeep         =>    open,   --always 1?
               M_AXIS_TO_ACCELERATOR_tlast           =>      open,       --???
-              M_AXIS_TO_ACCELERATOR_tready        =>     '1',       --???
+              M_AXIS_TO_ACCELERATOR_tready        =>     ready_sig,       --???
               M_AXIS_TO_ACCELERATOR_tvalid          =>    valid_in_sig,
               ------------------------------------------------------------------------------------
               -- ACCELERATOR AXI4-STREAM MASTER INTERFACE TO PL2P2-DMA AXI4-STREAM SLAVE INTERFACE
@@ -175,5 +179,33 @@ debayering: debayering_filter generic map( N => 32)
                                                                      G => G_sig,
                                                                      B => B_sig
                                                     );
+                                                   
+ready_sig <= not valid_ready;
+process (aclk)
+    begin
+        if rising_edge(aclk) then
+            if aresetn(0) = '0'  then
+                valid_ready <= '0';
+            else
+                valid_ready <= valid_in_sig;
+            end if;
+        end if;
+    end process;
+
+ 
+    process (aclk)
+    begin
+        if rising_edge(aclk) then
+            if aresetn(0) = '0' then
+                rst_state <= '0';
+            elsif valid_in_sig = '1' and rst_state = '0' then
+                rst_state <= '1';
+            elsif image_finished_sig <= '1' then
+                rst_state <= '0';
+            end if;
+        end if;
+    end process;
+    
+    new_image_sig <= '1' when rst_state = '0' and valid_in_sig = '1' else '0'; 
 
 end architecture; -- arch
