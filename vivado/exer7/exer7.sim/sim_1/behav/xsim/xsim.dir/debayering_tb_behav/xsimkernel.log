@@ -2,3 +2,6 @@ Running: xsim.dir/debayering_tb_behav/xsimk -simmode gui -wdb debayering_tb_beha
 Design successfully loaded
 Design Loading Memory Usage: 30224 KB (Peak: 30224 KB)
 Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 120420 KB (Peak: 169492 KB)
+Simulation CPU Usage: 60 ms
