@@ -14,14 +14,14 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package vl.vl_types
 Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.control_unit [control_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_unit [\control_unit(n=32)\]
 Compiling architecture behavioral of entity xil_defaultlib.singlebit_shift_register [\singlebit_shift_register(depth=...]
 Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_bhv_ver_s...
 Compiling module fifo_generator_v13_2_7.fifo_generator_v13_2_7_CONV_VER(...
 Compiling module fifo_generator_v13_2_7.fifo_generator_vlog_beh(C_COMMON...
-Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.fifo_generator_64_bit
 Compiling architecture behavioral of entity xil_defaultlib.dff [dff_default]
-Compiling architecture behavioral of entity xil_defaultlib.serial2parallel [serial2parallel_default]
+Compiling architecture behavioral of entity xil_defaultlib.serial2parallel [\serial2parallel(n=32)\]
 Compiling architecture behavioral of entity xil_defaultlib.rgb_computer [rgb_computer_default]
 Compiling architecture behavioral of entity xil_defaultlib.debayering_filter [debayering_filter_default]
 Compiling architecture testbench of entity xil_defaultlib.debayering_tb

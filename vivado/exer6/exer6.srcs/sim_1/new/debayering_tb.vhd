@@ -69,12 +69,10 @@ new_image <= '1';
 valid_in <= '1';
 wait for 20ns;
 
---new_image <= '0';
---pixel <= "00000100";
---wait for 32000ns;
+new_image <= '0';
 
 for i in 1 to 12 loop
-    for j in 1 to  32 loop
+    for j in 1 to  64 loop
         pixel <= std_logic_vector(to_unsigned(j, 8));
         wait for 20 ns;
     end loop;
@@ -84,8 +82,8 @@ valid_in <= '0';
 wait for 200 ns;
 valid_in <= '1';
 
-for i in 1 to 20 loop
-    for j in 1 to 32 loop
+for i in 1 to 52 loop
+    for j in 1 to 64 loop
         pixel <= std_logic_vector(to_unsigned(j, 8));
         wait for 20 ns;
         end loop;

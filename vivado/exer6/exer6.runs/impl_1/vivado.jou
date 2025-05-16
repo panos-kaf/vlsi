@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri May 16 22:42:43 2025
+# Process ID: 94521
+# Current directory: /home/panos/dev/vlsi/vivado/exer6/exer6.runs/impl_1
+# Command line: vivado -log debayering_filter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source debayering_filter.tcl -notrace
+# Log file: /home/panos/dev/vlsi/vivado/exer6/exer6.runs/impl_1/debayering_filter.vdi
+# Journal file: /home/panos/dev/vlsi/vivado/exer6/exer6.runs/impl_1/vivado.jou
+# Running On: archlinux, OS: Linux, CPU Frequency: 779.475 MHz, CPU Physical cores: 12, Host memory: 16160 MB
+#-----------------------------------------------------------
+source debayering_filter.tcl -notrace

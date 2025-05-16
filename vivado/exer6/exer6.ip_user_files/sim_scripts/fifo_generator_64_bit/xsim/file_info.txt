@@ -1,0 +1,2 @@
+fifo_generator_64_bit.v,verilog,xil_defaultlib,../../../../exer6.gen/sources_1/ip/fifo_generator_64_bit/sim/fifo_generator_64_bit.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

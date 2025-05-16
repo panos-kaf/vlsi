@@ -48,7 +48,7 @@ signal line_end_debug: std_logic;
 
 signal ena: std_logic; -- for file reader
 constant NUM_COL : integer := 1;  -- one integer per row
-file test_vector : text open read_mode is "/home/panos/dev/vlsi/test_input";
+file test_vector : text open read_mode is "/home/panos/dev/vlsi/debayering_checker/test_input_data";
 
 shared variable  row     : line;
 shared variable v_data_read : integer;
