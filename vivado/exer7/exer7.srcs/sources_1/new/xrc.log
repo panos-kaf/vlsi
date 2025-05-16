@@ -1,0 +1,18 @@
+Thu May 15 16:37:24 2025: Server was asked to start on port: '34625'
+Thu May 15 16:37:24 2025: Server is using token UUID: 'b0b1f2c6-9a5a-4495-9b04-6f91abfe8060'
+Thu May 15 16:37:24 2025: Attempting to start server on port '34625'
+Thu May 15 16:37:24 2025: XRC main fifo: created main fifo '/tmp/xrcmainb0b1f2c6-9a5a-4495-9b04-6f91abfe8060', fd read = 11
+Thu May 15 16:37:24 2025: Running Rule Check Server
+Thu May 15 16:37:24 2025: Version 1.6.1
+Thu May 15 16:37:24 2025: Rule Check Server: Accepted socket connection from client
+Thu May 15 16:37:24 2025: EXCHANGE_TOKEN received, server token: b0b1f2c6-9a5a-4495-9b04-6f91abfe8060, passed token: b0b1f2c6-9a5a-4495-9b04-6f91abfe8060
+Thu May 15 17:37:24 2025: Rule Check Server timeout; shutting down.
+Thu May 15 17:37:24 2025: Rule Check Server: do_await_stop
+Thu May 15 17:37:24 2025: Rule Check Server: stopping mainFifo_
+Thu May 15 17:37:24 2025: On server, in MainFifo::stop() 
+Thu May 15 17:37:24 2025: XRC main fifo: do_read error code: Operation canceled
+XRC main fifo: bytes_transferred: 0
+Thu May 15 17:37:24 2025: SERVER: destructor for server bound to port 34625
+Thu May 15 17:37:24 2025: XRC main fifo: Good unlink of /tmp/xrcmainb0b1f2c6-9a5a-4495-9b04-6f91abfe8060
+Thu May 15 17:37:24 2025: Server exiting with status 0.
+Thu May 15 17:37:24 2025: Closing log file.
