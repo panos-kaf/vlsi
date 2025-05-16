@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="schizo" location="C:/VITIS/schizo" platform="C:/VITIS/dvlsi_lab6_top/export/dvlsi_lab6_top/dvlsi_lab6_top.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="schizo_system" sysConfig="dvlsi_lab6_top" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="0b561face628b4be7d0316d917e9c9ef">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1661096246">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1522049640" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
